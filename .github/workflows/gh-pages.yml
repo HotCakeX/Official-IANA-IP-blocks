@@ -1,0 +1,16 @@
+name: gh-pages
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+permissions: write-all
+jobs:
+  build:
+    name: Run gh-pages
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: gh-pages
+        run: |
+          .\gh-pages.ps1
+        shell: pwsh

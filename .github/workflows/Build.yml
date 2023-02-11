@@ -1,0 +1,14 @@
+name: Build
+on:
+  workflow_dispatch:
+permissions: write-all
+jobs:
+  build:
+    name: Run Build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          .\build.ps1
+        shell: pwsh
