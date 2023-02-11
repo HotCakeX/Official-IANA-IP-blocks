@@ -9,4 +9,4 @@ https://www.iana.org/numbers
 - https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest
 
 
-Our website: 💗💓 https://hotcakex.github.io/Official-IANA-IP-blocks/
+Our website to get the new IP addresses for each country: https://hotcakex.github.io/Official-IANA-IP-blocks/
