@@ -1,6 +1,8 @@
 name: Build
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * *"
 permissions: write-all
 jobs:
   build:
