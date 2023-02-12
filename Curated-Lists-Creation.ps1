@@ -15,6 +15,6 @@ $StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubuserconte
 # Pushing the sources and list to main
 git config --global user.email "118815227+HotCakeX@users.noreply.github.com"
 git config --global user.name "HotCakeX"
-git add 'StateSponsorsOfTerrorism.txt'
+git add --all
 git commit -m "updating Curated lists"
 git push
