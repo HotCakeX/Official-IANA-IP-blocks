@@ -54,5 +54,5 @@ Set-Content .\Curated-Lists\OFACSanctioned.txt -Value $OFACSanctioned -Force
 git config --global user.email "118815227+HotCakeX@users.noreply.github.com"
 git config --global user.name "HotCakeX"
 git add --all
-git commit --allow-empty -m "updating Curated lists"
+git commit -m "updating Curated lists"
 git push
