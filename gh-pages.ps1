@@ -18,9 +18,9 @@ git checkout gh-pages
 
 $Date = Get-Date -AsUTC -UFormat "Year:%Y|Month:%m|Day:%d|Hour:%H|Minute:%M|Second:%S"
 $content = Get-Content .\index.html -Raw
-$content = $content -replace "(?s)(?<=<!-- Info:START -->).*(?=<!-- Info:END -->)", "`nLast updated: $Date (UTC) <br>"
-$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV4:START -->).*(?=<!-- Country-IP-List-IPV4:END -->)", "`n $LIST_IPV4"
-$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV6:START -->).*(?=<!-- Country-IP-List-IPV6:END -->)", "`n $LIST_IPV6"
+$content = $content -replace "(?s)(?<=<!-- Info:START -->).*(?=<!-- Info:END -->)", "`nLast updated: $Date (UTC) <br>`n"
+$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV4:START -->).*(?=<!-- Country-IP-List-IPV4:END -->)", "`n$LIST_IPV4`n"
+$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV6:START -->).*(?=<!-- Country-IP-List-IPV6:END -->)", "`n$LIST_IPV6`n"
 $null = Set-Content .\index.html -Value $content.TrimEnd()
 
 # Pushing the sources and list to main
