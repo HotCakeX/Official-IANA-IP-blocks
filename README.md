@@ -1,8 +1,6 @@
 # Official-IANA-IP-blocks
 ### Internet Assigned Numbers Authority [(IANA)](https://www.iana.org/numbers) official IP address blocks
 
-<br>
-<br>
 
 #### This repository is Automated with GitHub workflows, using PowerShell and running on latest Windows OS
 - [Build workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml): Grabs the latest list from the 5 Global Registeries for each continent and creates country specific text files from them and stores them in this repository - runs every day at `22:00`
