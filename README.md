@@ -16,6 +16,11 @@ This repository is Automated with GitHub workflows, using PowerShell and running
 
 <p align="center"><img src="https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/rir-map.svg" width="500"></p>
 
+<br>
+
+#### [You can use this `CSV` formatted reference file to identify full country names from their abbreviated forms](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/gh-pages/Country%20Alpha-2%20code%20Alpha-3%20code%20Numeri.csv)
+
+<br>
 
 ### Sources used by this GitHub repository (5 Regional Internet Registries in the world)
 
