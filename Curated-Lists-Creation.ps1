@@ -1,14 +1,13 @@
-$StateSponsorsofTerrorism = Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV4/IR.txt"
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV6/IR.txt"
-
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV4/CU.txt"
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV6/CU.txt"
-
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV4/KP.txt"
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV6/KN.txt"
- 
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV4/SY.txt"
-$StateSponsorsofTerrorism += Invoke-RestMethod -Uri "https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV6/SY.txt" | Out-File .\Curated-Lists\StateSponsorsOfTerrorism.txt
+Clear-Variable StateSponsorsofTerrorism
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\IR.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\IR.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\CU.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\CU.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\KP.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\KN.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\SY.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\SY.txt
+Set-Content .\Curated-Lists\StateSponsorsOfTerrorism.txt -Value $StateSponsorsofTerrorism -Force
 
 
 
