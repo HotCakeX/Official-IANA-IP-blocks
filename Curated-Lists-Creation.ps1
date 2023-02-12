@@ -1,12 +1,12 @@
 Clear-Variable StateSponsorsofTerrorism -ErrorAction SilentlyContinue
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\IR.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\IR.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\CU.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\CU.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\KP.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\KN.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\SY.txt
-$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\SY.txt
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\IR.txt #Iran
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\IR.txt #Iran
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\CU.txt #Cuba
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\CU.txt #Cuba
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\KP.txt #North korea
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\KN.txt #North korea
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\SY.txt #Syria
+$StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\SY.txt #Syria
 Set-Content .\Curated-Lists\StateSponsorsOfTerrorism.txt -Value $StateSponsorsofTerrorism -Force
 
 
