@@ -1,4 +1,4 @@
-Clear-Variable StateSponsorsofTerrorism
+Clear-Variable StateSponsorsofTerrorism -ErrorAction SilentlyContinue
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\IR.txt
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\IR.txt
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\CU.txt
