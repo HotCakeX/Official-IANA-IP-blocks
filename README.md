@@ -17,7 +17,7 @@ This repository is Automated with GitHub workflows, using PowerShell and running
 <p align="center"><img src="https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/rir-map.svg" width="500"></p>
 
 
-### Sources used by this GitHub repository (5 global registeries in the world)
+### Sources used by this GitHub repository (5 Regional Internet Registries in the world)
 
 - **APNIC** ( _[Asia Pacific Network Information Centre](https://www.apnic.net/)_ )
   - https://ftp.apnic.net/stats/apnic/delegated-apnic-latest
