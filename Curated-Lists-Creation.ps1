@@ -7,6 +7,7 @@ $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\KP.txt
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\KN.txt
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV4\SY.txt
 $StateSponsorsofTerrorism += Get-Content .\CIDR-IPAddress\IPV6\SY.txt
+Remove-Item .\Curated-Lists\StateSponsorsOfTerrorism.txt -Force -ErrorAction SilentlyContinue
 Set-Content .\Curated-Lists\StateSponsorsOfTerrorism.txt -Value $StateSponsorsofTerrorism -Force
 
 
@@ -46,6 +47,7 @@ $OFACSanctioned += Get-Content .\CIDR-IPAddress\ipv4\VE.txt #Venezuela (Bolivari
 $OFACSanctioned += Get-Content .\CIDR-IPAddress\ipv6\VE.txt #Venezuela (Bolivarian Republic of)
 $OFACSanctioned += Get-Content .\CIDR-IPAddress\IPV4\ZW.txt #Zimbabwe
 $OFACSanctioned += Get-Content .\CIDR-IPAddress\ipv6\ZW.txt #Zimbabwe
+Remove-Item .\Curated-Lists\OFACSanctioned.txt -Force -ErrorAction SilentlyContinue
 Set-Content .\Curated-Lists\OFACSanctioned.txt -Value $OFACSanctioned -Force
 
 
