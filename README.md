@@ -1,8 +1,8 @@
 # Official-IANA-IP-blocks
-### Internet Assigned Numbers Authority [(IANA)](https://www.iana.org/numbers) official IP address blocks
+## Internet Assigned Numbers Authority [(IANA)](https://www.iana.org/numbers) official IP address blocks
 
 
-#### This repository is Automated with GitHub workflows, using PowerShell and running on latest Windows OS
+### This repository is Automated with GitHub workflows, using PowerShell and running on latest Windows OS
 - [Build workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml): Grabs the latest list from the 5 Global Registeries for each continent and creates country specific text files from them and stores them in this repository - runs every day at `22:00`
 - [gh-pages workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/gh-pages.yml): Lists the country names and their corresponding files on [our GitHub pages website](https://hotcakex.github.io/Official-IANA-IP-blocks/) - runs every day at `23:00`
 - [pages-build-deployment workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment): Updates the GitHub pages website - runs automatically whenever the HTML file changes
@@ -16,13 +16,13 @@
 
 <br>
 
-#### Use our website to easily get the newest IP addresses for each country in `CIDR` format: https://hotcakex.github.io/Official-IANA-IP-blocks/
+## Use our website to easily get the newest IP addresses for each country in `CIDR` format: https://hotcakex.github.io/Official-IANA-IP-blocks/
 
 #### [You can use this `CSV` formatted reference file to identify full country names from their abbreviated forms](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/gh-pages/Country%20Alpha-2%20code%20Alpha-3%20code%20Numeri.csv)
-
+They are in [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) format
 <br>
 
-### Sources used by this GitHub repository (5 Regional Internet Registries in the world)
+## Sources used by this GitHub repository (5 Regional Internet Registries in the world)
 
 - **APNIC** ( _[Asia Pacific Network Information Centre](https://www.apnic.net/)_ )
   - https://ftp.apnic.net/stats/apnic/delegated-apnic-latest
@@ -35,5 +35,8 @@
 - **LACNIC** ( _[Latin America and Caribbean Network Information Centre](https://www.lacnic.net/)_ )
   - https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest
 
+<br>
+
+_They are in [RIR statistics exchange format](https://www.apnic.net/about-apnic/corporate-documents/documents/resource-guidelines/rir-statistics-exchange-format/)_
 
 
