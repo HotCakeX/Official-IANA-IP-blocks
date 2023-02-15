@@ -7,19 +7,29 @@
 
 
   <style>
-    .columns {
-      Width: 100%;
-      content: "";
-      display: table;
-      clear: both;
-    }
+      
+     
+    
     .column {
-      transform: translatex(0px) translatey(0px);
+   
       text-align: center;
-      font-family: 'Amiko', sans-serif;      
-      width: 50%;
-      float: left;
+      font-family: 'Amiko', sans-serif;    
+    
     }
+
+
+
+      .columnv4 {
+        width: 50%;
+      float: left;
+      }
+
+      .columnv6 {
+        width: 50%;
+      float: right;        
+      }
+
+
 
     /* Body */
     body {
@@ -55,24 +65,89 @@
       font-style: normal;
       text-shadow: none;
       direction: ltr;
+      font-size: 28px;
       column-count: 5;  
-background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #24FE41, #FDFC47);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .footer {
       color: #00fff2;
       font-family: 'Amiko', sans-serif;
       text-align: center;
+      width: 100%;
+      float: left;
       
     }
  
     .footer a {
       background: #00FF00;
-background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
+background: linear-gradient(to right, #24FE41, #FDFC47);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+
+
+
+.divider {
+  display: flex;
+}
+.divider:before, .divider:after {
+  content: "";
+  flex: 1;
+}
+.line {
+  align-items: center;
+  margin: 1em -1em;
+}
+.line:before, .line:after {
+  height: 1px;
+  margin: 0 1em;
+}
+.glow:before, .glow:after {
+  height: 6px;
+  -webkit-filter: blur(5px);
+  border-radius: 5px;
+}
+.glow:before {
+  background: linear-gradient(to right, #3494e6 0%, #ec6ead 100%);
+}
+.glow:after {
+  background: linear-gradient(to right, #3494e6 0%, #ec6ead 100%);
+}
+
+
+
+
 
   </style>
 
@@ -92,6 +167,13 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
 
 <body>
 
+  
+
+
+  
+
+
+
   <div class="info">
 
     <!-- Info:START -->
@@ -104,7 +186,7 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
 
     <div class="column">
 
-
+      <div class="columnv4">
 
       <h1>IPv4 </h1>
 
@@ -592,9 +674,10 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
 
     </div>
 
-
+  </div>
     <div class="column">
 
+      <div class="columnv6">
 
       <h1>IPv6 </h1>
 
@@ -1067,14 +1150,13 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
         href="https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/CIDR-IPAddress/IPV6/ZW.txt">ZW_ipv6</a><br>
       <!-- Country-IP-List-IPV6:END -->
 
-
+    </div>
     </div>
 
   </div>
 
-
+  
   <div class="footer">
-
 
 
     <footer>
@@ -1083,9 +1165,10 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
       <br>
       <br>
       
-          <a href="https://github.com/HotCakeX/Official-IANA-IP-blocks">GitHub Repository</a>
+          <a class="divider line glow" href="https://github.com/HotCakeX/Official-IANA-IP-blocks">GitHub Repository</a>
+      
+          <a class="divider line glow" href="https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/gh-pages/Country%20Alpha-2%20code%20Alpha-3%20code%20Numeri.csv">Identify full country names from their abbreviated forms</a>
          
-        
 
       
 
@@ -1094,6 +1177,8 @@ background: linear-gradient(to right, #fceabb 0%, #f8b500 100%);
 
 
   </div>
+
+  
 
 
 </body>
