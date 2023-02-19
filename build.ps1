@@ -170,7 +170,7 @@ Sort-Object country |
 ForEach-Object {
     $list += "$($_.country)`n"
 }
-($list).Trim() | Out-File -Path ".\TXT\_countries.txt" -Force
+($list).Trim() | Out-File -Path ".\TXT\countries.txt" -Force
 #endregion txtCountries
 
 #region txtCountryIPV4
