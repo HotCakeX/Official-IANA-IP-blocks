@@ -114,27 +114,41 @@ $ipData | Where-Object { $_.version -EQ 'ipv6' } | Group-Object -Property 'count
 Write-Host "jsonCountries" -ForegroundColor Green
 $ipData | Select-Object country -Unique |
 Sort-Object country |
-ConvertTo-Json -AsArray | Out-File -Path ".\JSON\_countries.json" -Force
+ConvertTo-Json -AsArray | Out-File -Path ".\JSON\countries.json" -Force
 #endregion csvCountries
 
 #region jsonGlobal
 Write-Host "jsonGlobal" -ForegroundColor Green
 $ipData | Select-Object country, ip, prefixlength, version |
-Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\_global.json" -Force
+Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\global.json" -Force
+
+Write-Host "jsonGlobalCompressed" -ForegroundColor Green
+$ipData | Select-Object country, ip, prefixlength, version |
+Sort-Object country | ConvertTo-Json -AsArray -Compress | Out-File -Path ".\JSON\global_compressed.json" -Force
 #endregion jsonGlobal
 
 #region jsonGlobalIPV4
 Write-Host "jsonGlobalIPV4" -ForegroundColor Green
 $ipData | Select-Object country, ip, prefixlength, version |
 Where-Object { $_.version -EQ 'ipv4' } |
-Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\_global_ipv4.json" -Force
+Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\global_ipv4.json" -Force
+
+Write-Host "jsonGlobalIPV4Compressed" -ForegroundColor Green
+$ipData | Select-Object country, ip, prefixlength, version |
+Where-Object { $_.version -EQ 'ipv4' } |
+Sort-Object country | ConvertTo-Json -AsArray -Compress | Out-File -Path ".\JSON\global_ipv4_compressed.json" -Force
 #endregion jsonGlobalIPV4
 
 #region jsonGlobalIPV6
 Write-Host "jsonGlobalIPV6" -ForegroundColor Green
 $ipData | Select-Object country, ip, prefixlength, version |
 Where-Object { $_.version -EQ 'ipv6' } |
-Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\_global_ipv6.json" -Force
+Sort-Object country | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\global_ipv6.json" -Force
+
+Write-Host "jsonGlobalIPV6Compressed" -ForegroundColor Green
+$ipData | Select-Object country, ip, prefixlength, version |
+Where-Object { $_.version -EQ 'ipv6' } |
+Sort-Object country | ConvertTo-Json -AsArray -Compress | Out-File -Path ".\JSON\global_ipv6_compressed.json" -Force
 #endregion jsonGlobalIPV6
 
 #region jsonCountryIPV4
