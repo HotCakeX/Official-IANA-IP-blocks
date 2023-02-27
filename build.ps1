@@ -19,7 +19,7 @@ if (!(Test-Path ".\JSON\IPV6")) { $null = New-Item ".\JSON\IPV6" -ItemType Direc
 if (!(Test-Path ".\TXT")) { $null = New-Item ".\TXT" -ItemType Directory -Force }
 if (!(Test-Path ".\TXT\IPV4")) { $null = New-Item ".\TXT\IPV4" -ItemType Directory -Force }
 if (!(Test-Path ".\TXT\IPV6")) { $null = New-Item ".\TXT\IPV6" -ItemType Directory -Force }
-<#
+
 #region download
 $regions_delegated.GetEnumerator() | ForEach-Object -Parallel {
     Write-Host $_.Key = $_.Value -ForegroundColor Cyan
@@ -27,7 +27,7 @@ $regions_delegated.GetEnumerator() | ForEach-Object -Parallel {
     Set-Content ".\IANASources\$($_.Key).txt" -Value $content -Force
 } -ThrottleLimit 5
 #endregion download
-#>
+
 #region process
 $ipData = [System.Collections.Concurrent.ConcurrentBag[psobject]]::new()
 $regions_delegated.GetEnumerator() | ForEach-Object -Parallel {
@@ -116,7 +116,7 @@ $ipData | Where-Object { $_.version -EQ 'ipv4' } | Group-Object -Property 'count
 #endregion CountryIPV4
 
 #region CountryIPV6
-Write-Host "csvCountryIPV6" -ForegroundColor Green
+Write-Host "CountryIPV6" -ForegroundColor Green
 $ipData | Where-Object { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Select-Object country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -NoTypeInformation -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
