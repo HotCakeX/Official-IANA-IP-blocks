@@ -1,8 +1,14 @@
 [
   {
     "country": "GI",
-    "ip": "2001:67c:1728::",
-    "prefixlength": "48",
+    "ip": "2a01:d0::",
+    "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "GI",
+    "ip": "2a02:638::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
@@ -14,18 +20,6 @@
   {
     "country": "GI",
     "ip": "2a01:8c40::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "GI",
-    "ip": "2a01:d0::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "GI",
-    "ip": "2a02:638::",
     "prefixlength": "32",
     "version": "ipv6"
   },
@@ -105,6 +99,12 @@
     "country": "GI",
     "ip": "2a10:cec0::",
     "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "GI",
+    "ip": "2001:67c:1728::",
+    "prefixlength": "48",
     "version": "ipv6"
   }
 ]

@@ -1,8 +1,20 @@
 [
   {
     "country": "KW",
-    "ip": "2001:67c:7f4::",
-    "prefixlength": "48",
+    "ip": "2a02:c08::",
+    "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "KW",
+    "ip": "2a06:280::",
+    "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "KW",
+    "ip": "2a07:740::",
+    "prefixlength": "29",
     "version": "ipv6"
   },
   {
@@ -67,12 +79,6 @@
   },
   {
     "country": "KW",
-    "ip": "2a02:c08::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "KW",
     "ip": "2a02:e080::",
     "prefixlength": "29",
     "version": "ipv6"
@@ -115,19 +121,7 @@
   },
   {
     "country": "KW",
-    "ip": "2a06:280::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "KW",
     "ip": "2a06:e440::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "KW",
-    "ip": "2a07:740::",
     "prefixlength": "29",
     "version": "ipv6"
   },
@@ -225,6 +219,12 @@
     "country": "KW",
     "ip": "2a13:3740::",
     "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "KW",
+    "ip": "2001:67c:7f4::",
+    "prefixlength": "48",
     "version": "ipv6"
   }
 ]

@@ -1,6 +1,6 @@
 country,ip,prefixlength,version
-GE,2001:67c:2128::,48,ipv6
-GE,2001:7f8:11e::,48,ipv6
+GE,2a0f:8c0::,32,ipv6
+GE,2a13:5c0::,29,ipv6
 GE,2a00:e8c0::,29,ipv6
 GE,2a00:f2e0::,32,ipv6
 GE,2a01:47a0::,32,ipv6
@@ -50,7 +50,6 @@ GE,2a0d:bc80::,29,ipv6
 GE,2a0e:2700::,29,ipv6
 GE,2a0f:52c0::,29,ipv6
 GE,2a0f:6280::,29,ipv6
-GE,2a0f:8c0::,32,ipv6
 GE,2a10:1580::,29,ipv6
 GE,2a10:3480::,29,ipv6
 GE,2a10:6040::,32,ipv6
@@ -62,5 +61,6 @@ GE,2a12:e340::,29,ipv6
 GE,2a13:3b00::,29,ipv6
 GE,2a13:5140::,29,ipv6
 GE,2a13:5180::,29,ipv6
-GE,2a13:5c0::,29,ipv6
 GE,2a13:b400::,29,ipv6
+GE,2001:7f8:11e::,48,ipv6
+GE,2001:67c:2128::,48,ipv6

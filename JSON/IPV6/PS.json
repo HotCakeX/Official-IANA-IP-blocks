@@ -1,20 +1,32 @@
 [
   {
     "country": "PS",
-    "ip": "2001:678:5f4::",
-    "prefixlength": "48",
+    "ip": "2a03:7c0::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PS",
-    "ip": "2001:7f8:12b::",
-    "prefixlength": "48",
+    "ip": "2a03:c40::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PS",
-    "ip": "2001:7f8:72::",
-    "prefixlength": "48",
+    "ip": "2a04:940::",
+    "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "PS",
+    "ip": "2a0d:a40::",
+    "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "PS",
+    "ip": "2a11:a40::",
+    "prefixlength": "29",
     "version": "ipv6"
   },
   {
@@ -115,12 +127,6 @@
   },
   {
     "country": "PS",
-    "ip": "2a03:7c0::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PS",
     "ip": "2a03:7e60::",
     "prefixlength": "32",
     "version": "ipv6"
@@ -139,19 +145,7 @@
   },
   {
     "country": "PS",
-    "ip": "2a03:c40::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PS",
     "ip": "2a04:19c0::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "PS",
-    "ip": "2a04:940::",
     "prefixlength": "29",
     "version": "ipv6"
   },
@@ -199,12 +193,6 @@
   },
   {
     "country": "PS",
-    "ip": "2a0d:a40::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "PS",
     "ip": "2a0e:dcc0::",
     "prefixlength": "29",
     "version": "ipv6"
@@ -235,12 +223,6 @@
   },
   {
     "country": "PS",
-    "ip": "2a11:a40::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "PS",
     "ip": "2a11:ac80::",
     "prefixlength": "29",
     "version": "ipv6"
@@ -249,6 +231,24 @@
     "country": "PS",
     "ip": "2a12:cf40::",
     "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "PS",
+    "ip": "2001:7f8:72::",
+    "prefixlength": "48",
+    "version": "ipv6"
+  },
+  {
+    "country": "PS",
+    "ip": "2001:678:5f4::",
+    "prefixlength": "48",
+    "version": "ipv6"
+  },
+  {
+    "country": "PS",
+    "ip": "2001:7f8:12b::",
+    "prefixlength": "48",
     "version": "ipv6"
   }
 ]

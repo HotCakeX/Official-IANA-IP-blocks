@@ -1,31 +1,25 @@
 [
   {
     "country": "PE",
-    "ip": "2001:1300::",
+    "ip": "2800:18::",
     "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
-    "ip": "2001:1380::",
+    "ip": "2803:40::",
     "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
-    "ip": "2001:1388::",
+    "ip": "2803:e0::",
     "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
     "ip": "2800:120::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PE",
-    "ip": "2800:18::",
     "prefixlength": "32",
     "version": "ipv6"
   },
@@ -67,26 +61,32 @@
   },
   {
     "country": "PE",
-    "ip": "2801:1b:3000::",
-    "prefixlength": "48",
+    "ip": "2803:500::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
-    "ip": "2801:1c:2000::",
-    "prefixlength": "48",
+    "ip": "2803:f00::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
-    "ip": "2801:1c:8800::",
-    "prefixlength": "48",
+    "ip": "2001:1300::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
     "country": "PE",
-    "ip": "2801:1f:6800::",
-    "prefixlength": "48",
+    "ip": "2001:1380::",
+    "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "PE",
+    "ip": "2001:1388::",
+    "prefixlength": "32",
     "version": "ipv6"
   },
   {
@@ -229,12 +229,6 @@
   },
   {
     "country": "PE",
-    "ip": "2803:40::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PE",
     "ip": "2803:4480::",
     "prefixlength": "32",
     "version": "ipv6"
@@ -284,12 +278,6 @@
   {
     "country": "PE",
     "ip": "2803:4f40::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PE",
-    "ip": "2803:500::",
     "prefixlength": "32",
     "version": "ipv6"
   },
@@ -673,12 +661,6 @@
   },
   {
     "country": "PE",
-    "ip": "2803:e0::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PE",
     "ip": "2803:e020::",
     "prefixlength": "32",
     "version": "ipv6"
@@ -716,12 +698,6 @@
   {
     "country": "PE",
     "ip": "2803:efe0::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "PE",
-    "ip": "2803:f00::",
     "prefixlength": "32",
     "version": "ipv6"
   },
@@ -777,6 +753,30 @@
     "country": "PE",
     "ip": "2803:fe80::",
     "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "PE",
+    "ip": "2801:1b:3000::",
+    "prefixlength": "48",
+    "version": "ipv6"
+  },
+  {
+    "country": "PE",
+    "ip": "2801:1c:2000::",
+    "prefixlength": "48",
+    "version": "ipv6"
+  },
+  {
+    "country": "PE",
+    "ip": "2801:1c:8800::",
+    "prefixlength": "48",
+    "version": "ipv6"
+  },
+  {
+    "country": "PE",
+    "ip": "2801:1f:6800::",
+    "prefixlength": "48",
     "version": "ipv6"
   }
 ]

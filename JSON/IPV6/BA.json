@@ -1,8 +1,20 @@
 [
   {
     "country": "BA",
-    "ip": "2001:7f8:d7::",
-    "prefixlength": "48",
+    "ip": "2a00:fe8::",
+    "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "BA",
+    "ip": "2a01:478::",
+    "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "BA",
+    "ip": "2a0a:ac0::",
+    "prefixlength": "29",
     "version": "ipv6"
   },
   {
@@ -50,18 +62,6 @@
   {
     "country": "BA",
     "ip": "2a00:f7c0::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "BA",
-    "ip": "2a00:fe8::",
-    "prefixlength": "32",
-    "version": "ipv6"
-  },
-  {
-    "country": "BA",
-    "ip": "2a01:478::",
     "prefixlength": "29",
     "version": "ipv6"
   },
@@ -187,12 +187,6 @@
   },
   {
     "country": "BA",
-    "ip": "2a0a:ac0::",
-    "prefixlength": "29",
-    "version": "ipv6"
-  },
-  {
-    "country": "BA",
     "ip": "2a0c:1600::",
     "prefixlength": "32",
     "version": "ipv6"
@@ -213,6 +207,12 @@
     "country": "BA",
     "ip": "2a0e:8ac0::",
     "prefixlength": "29",
+    "version": "ipv6"
+  },
+  {
+    "country": "BA",
+    "ip": "2001:7f8:d7::",
+    "prefixlength": "48",
     "version": "ipv6"
   }
 ]
