@@ -4,9 +4,10 @@
 
 ### This repository is Automated with GitHub workflows, using PowerShell and running on latest Windows OS
 
-- [Build workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml): Grabs the latest list from the 5 Global Registeries for each continent and creates country specific text files from them and stores them in this repository - runs every day at `22:00`
-- [gh-pages workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/gh-pages.yml): Lists the country names and their corresponding files on [our GitHub pages website](https://hotcakex.github.io/Official-IANA-IP-blocks/) - runs every day at `23:00`
-- [pages-build-deployment workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment): Updates the GitHub pages website - runs automatically whenever the HTML file changes
+- [Build workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml): Grabs the latest lists from the 5 Global Registeries for each continent and creates country specific `TEXT`, `CSV` and `JSON` files based off them and stores them in this repository - runs every day at `22:00`
+
+- [Pages-build-deployment workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment): Updates the GitHub pages website - runs automatically whenever the HTML file changes.
+
 - [CuratedLists workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml): Creates curated lists - runs every day at `15:00`
   - [State Sponsors of Terrorism countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/StateSponsorsOfTerrorism.txt) - [_official website_](https://www.state.gov/state-sponsors-of-terrorism/)
   - [OFAC Sanctioned Countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/OFACSanctioned.txt) - [_official website_](https://orpa.princeton.edu/export-controls/sanctioned-countries)
@@ -17,11 +18,10 @@
 
 <br>
 
-## Use our website to easily get the newest IP addresses for each country in `CIDR` format: https://hotcakex.github.io/Official-IANA-IP-blocks/
+### Use our website to easily get the newest IP addresses for each country in `CIDR` format, available in `Text`, `CSV` and `JSON` file formats
 
-### [You can use this `CSV` formatted reference file to identify full country names from their abbreviated forms](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/gh-pages/Country%20Alpha-2%20code%20Alpha-3%20code%20Numeri.csv)
+## https://hotcakex.github.io/Official-IANA-IP-blocks/
 
-They are in [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) format
 <br>
 
 ## Sources used by this GitHub repository (5 Regional Internet Registries in the world)

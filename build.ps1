@@ -62,7 +62,8 @@ $ipData = $ipData |
 Sort-Object country, version, {
     if ($_.version -eq 'ipv4') {
         $_.ip -as [version]
-    } else {
+    }
+    else {
         [int64]('0x' + $_.ip.Replace(":", ""))
     }
 }
