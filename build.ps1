@@ -110,7 +110,7 @@ $ipData | Where-Object { $_.version -EQ 'ipv4' } | Group-Object -Property 'count
     $_.Group | Select-Object country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -NoTypeInformation -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
     $list = ""
-    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)\$($_.prefixlength)`n" }
+    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
     $list.Trim() | Out-File -Path ".\TXT\IPV4\$($_.Name).txt" -Force
 } -ThrottleLimit 32
 #endregion CountryIPV4
@@ -121,7 +121,7 @@ $ipData | Where-Object { $_.version -EQ 'ipv6' } | Group-Object -Property 'count
     $_.Group | Select-Object country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -NoTypeInformation -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
     $list = ""
-    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)\$($_.prefixlength)`n" }
+    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
     $list.Trim() | Out-File -Path ".\TXT\IPV6\$($_.Name).txt" -Force
 } -ThrottleLimit 32
 #endregion CountryIPV6
