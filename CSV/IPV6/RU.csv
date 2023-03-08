@@ -126,6 +126,7 @@ RU,2a0b:580::,32,ipv6
 RU,2a0b:780::,29,ipv6
 RU,2a0b:840::,29,ipv6
 RU,2a0b:980::,32,ipv6
+RU,2a0c:5c0::,29,ipv6
 RU,2a0c:980::,32,ipv6
 RU,2a0c:ac0::,29,ipv6
 RU,2a0c:b80::,29,ipv6
@@ -776,6 +777,7 @@ RU,2a03:f340::,29,ipv6
 RU,2a03:f500::,29,ipv6
 RU,2a03:f5c0::,32,ipv6
 RU,2a03:f700::,29,ipv6
+RU,2a03:f7c0::,29,ipv6
 RU,2a03:fe00::,32,ipv6
 RU,2a03:fec0::,32,ipv6
 RU,2a04:17c0::,29,ipv6
@@ -994,6 +996,7 @@ RU,2a06:d4c0::,29,ipv6
 RU,2a06:d640::,29,ipv6
 RU,2a06:d900::,29,ipv6
 RU,2a06:dc40::,29,ipv6
+RU,2a06:ddc0::,29,ipv6
 RU,2a06:e0c0::,29,ipv6
 RU,2a06:e200::,29,ipv6
 RU,2a06:e600::,29,ipv6
@@ -1398,6 +1401,7 @@ RU,2a0b:7840::,29,ipv6
 RU,2a0b:7a80::,29,ipv6
 RU,2a0b:7c80::,29,ipv6
 RU,2a0b:7ec0::,29,ipv6
+RU,2a0b:8040::,29,ipv6
 RU,2a0b:8380::,29,ipv6
 RU,2a0b:8480::,29,ipv6
 RU,2a0b:88c0::,29,ipv6
@@ -1431,9 +1435,11 @@ RU,2a0b:d280::,29,ipv6
 RU,2a0b:d540::,32,ipv6
 RU,2a0b:d600::,29,ipv6
 RU,2a0b:d700::,29,ipv6
+RU,2a0b:d900::,29,ipv6
 RU,2a0b:dfc0::,29,ipv6
 RU,2a0b:e100::,29,ipv6
 RU,2a0b:e980::,29,ipv6
+RU,2a0b:e9c0::,29,ipv6
 RU,2a0b:ec40::,29,ipv6
 RU,2a0b:ec80::,29,ipv6
 RU,2a0b:ed00::,29,ipv6
@@ -1468,9 +1474,12 @@ RU,2a0c:5240::,29,ipv6
 RU,2a0c:5300::,29,ipv6
 RU,2a0c:5580::,29,ipv6
 RU,2a0c:5640::,29,ipv6
+RU,2a0c:5d00::,29,ipv6
 RU,2a0c:5ec0::,29,ipv6
+RU,2a0c:65c0::,29,ipv6
 RU,2a0c:6680::,29,ipv6
 RU,2a0c:6900::,29,ipv6
+RU,2a0c:6980::,29,ipv6
 RU,2a0c:6d00::,32,ipv6
 RU,2a0c:6fc0::,32,ipv6
 RU,2a0c:7080::,29,ipv6
@@ -1529,6 +1538,7 @@ RU,2a0c:ee00::,29,ipv6
 RU,2a0c:f240::,29,ipv6
 RU,2a0c:f280::,29,ipv6
 RU,2a0c:f540::,29,ipv6
+RU,2a0c:f640::,29,ipv6
 RU,2a0c:fe40::,29,ipv6
 RU,2a0d:10c0::,29,ipv6
 RU,2a0d:14c0::,29,ipv6
@@ -1824,7 +1834,6 @@ RU,2a0e:ab80::,29,ipv6
 RU,2a0e:adc0::,29,ipv6
 RU,2a0e:ae00::,29,ipv6
 RU,2a0e:af40::,29,ipv6
-RU,2a0e:b0c0::,29,ipv6
 RU,2a0e:b140::,29,ipv6
 RU,2a0e:b1c0::,29,ipv6
 RU,2a0e:b200::,29,ipv6
@@ -2001,7 +2010,6 @@ RU,2a0f:ce80::,32,ipv6
 RU,2a0f:cf80::,29,ipv6
 RU,2a0f:d000::,29,ipv6
 RU,2a0f:d080::,29,ipv6
-RU,2a0f:d400::,29,ipv6
 RU,2a0f:d700::,29,ipv6
 RU,2a0f:d900::,29,ipv6
 RU,2a0f:da80::,29,ipv6
@@ -2476,7 +2484,6 @@ RU,2a12:4ec0::,29,ipv6
 RU,2a12:4f40::,29,ipv6
 RU,2a12:4f80::,29,ipv6
 RU,2a12:4fc0::,29,ipv6
-RU,2a12:53c0::,29,ipv6
 RU,2a12:5400::,29,ipv6
 RU,2a12:54c0::,29,ipv6
 RU,2a12:5580::,29,ipv6
@@ -2635,6 +2642,7 @@ RU,2a13:8580::,29,ipv6
 RU,2a13:9880::,29,ipv6
 RU,2a13:a500::,29,ipv6
 RU,2a13:ac80::,29,ipv6
+RU,2a13:af80::,29,ipv6
 RU,2a13:b200::,29,ipv6
 RU,2a13:b300::,29,ipv6
 RU,2a13:c200::,29,ipv6
