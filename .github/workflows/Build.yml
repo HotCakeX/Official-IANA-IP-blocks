@@ -1,0 +1,22 @@
+name: Build
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * *"
+permissions: write-all
+jobs:
+  build:
+    name: Run Build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          .\build.ps1
+          # Pushing the sources and list to main
+          git config --global user.email "118815227+HotCakeX@users.noreply.github.com"
+          git config --global user.name "HotCakeX"
+          git add --all
+          git commit -m "updating sources and list"
+          git push
+        shell: pwsh
