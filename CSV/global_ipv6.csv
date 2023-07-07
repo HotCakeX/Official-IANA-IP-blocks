@@ -285,6 +285,7 @@ AE,2a0e:b840::,29,ipv6
 AE,2a0e:bc80::,29,ipv6
 AE,2a0e:bcc0::,29,ipv6
 AE,2a0e:bd40::,29,ipv6
+AE,2a0e:bdc0::,29,ipv6
 AE,2a0e:c040::,29,ipv6
 AE,2a0e:c200::,29,ipv6
 AE,2a0e:c2c0::,29,ipv6
@@ -298,6 +299,7 @@ AE,2a0e:df40::,29,ipv6
 AE,2a0e:e440::,29,ipv6
 AE,2a0e:e840::,29,ipv6
 AE,2a0e:ea40::,29,ipv6
+AE,2a0e:efc0::,29,ipv6
 AE,2a0e:f040::,29,ipv6
 AE,2a0e:f740::,29,ipv6
 AE,2a0e:fbc0::,29,ipv6
@@ -306,6 +308,7 @@ AE,2a0f:1c00::,29,ipv6
 AE,2a0f:26c0::,29,ipv6
 AE,2a0f:2780::,29,ipv6
 AE,2a0f:2c00::,29,ipv6
+AE,2a0f:3200::,29,ipv6
 AE,2a0f:4140::,29,ipv6
 AE,2a0f:5600::,29,ipv6
 AE,2a0f:59c0::,29,ipv6
@@ -321,10 +324,12 @@ AE,2a0f:8d80::,29,ipv6
 AE,2a0f:8e00::,29,ipv6
 AE,2a0f:94c0::,29,ipv6
 AE,2a0f:9500::,29,ipv6
+AE,2a0f:9dc0::,29,ipv6
 AE,2a0f:9e40::,29,ipv6
 AE,2a0f:a380::,29,ipv6
 AE,2a0f:a600::,29,ipv6
 AE,2a0f:aa00::,29,ipv6
+AE,2a0f:ab80::,29,ipv6
 AE,2a0f:ae00::,29,ipv6
 AE,2a0f:b380::,29,ipv6
 AE,2a0f:b600::,29,ipv6
@@ -339,6 +344,7 @@ AE,2a10:79c0::,29,ipv6
 AE,2a10:d280::,29,ipv6
 AE,2a10:e840::,32,ipv6
 AE,2a10:f840::,29,ipv6
+AE,2a11:2f00::,29,ipv6
 AE,2a11:9c80::,29,ipv6
 AE,2a11:bb80::,29,ipv6
 AE,2a12:4bc0::,29,ipv6
@@ -14279,6 +14285,7 @@ BR,2804:8c2c::,32,ipv6
 BR,2804:8c30::,32,ipv6
 BR,2804:8c34::,32,ipv6
 BR,2804:8c38::,32,ipv6
+BR,2804:8c3c::,32,ipv6
 BR,2a00:aee0::,29,ipv6
 BR,2001:12f8:2::,47,ipv6
 BR,2001:12f8:4::,47,ipv6
@@ -14774,6 +14781,7 @@ BR,2801:80:3f80::,48,ipv6
 BR,2801:80:3f90::,48,ipv6
 BR,2801:80:3fa0::,48,ipv6
 BR,2801:80:3fb0::,48,ipv6
+BR,2801:80:3fc0::,48,ipv6
 BR,2801:80:4000::,40,ipv6
 BR,2804:1f3c:4000::,35,ipv6
 BR,2804:1f3c:8000::,40,ipv6
@@ -18961,6 +18969,7 @@ CN,2a0a:2840::,29,ipv6
 CN,2a0e:7580::,29,ipv6
 CN,2a10:1cc0::,29,ipv6
 CN,2a13:1800::,29,ipv6
+CN,2a13:8b40::,29,ipv6
 CN,2001:7fa:10::,48,ipv6
 CN,2001:dd8:1a::,48,ipv6
 CN,2001:df2:80::,48,ipv6
@@ -21428,7 +21437,7 @@ DE,2a02:24d8::,32,ipv6
 DE,2a02:2678::,29,ipv6
 DE,2a02:2690::,32,ipv6
 DE,2a02:26f8::,29,ipv6
-DE,2a02:2760::,32,ipv6
+DE,2a02:2760::,29,ipv6
 DE,2a02:2800::,29,ipv6
 DE,2a02:2840::,32,ipv6
 DE,2a02:2878::,32,ipv6
@@ -23060,6 +23069,7 @@ DE,2001:678:35c::,48,ipv6
 DE,2001:678:360::,48,ipv6
 DE,2001:678:36c::,48,ipv6
 DE,2001:678:370::,48,ipv6
+DE,2001:678:388::,48,ipv6
 DE,2001:678:3a0::,48,ipv6
 DE,2001:678:3a8::,48,ipv6
 DE,2001:678:3b4::,48,ipv6
@@ -24010,6 +24020,7 @@ DK,2a13:5600::,29,ipv6
 DK,2a13:7ac0::,32,ipv6
 DK,2a13:8640::,29,ipv6
 DK,2a13:8a00::,29,ipv6
+DK,2a13:8bc0::,29,ipv6
 DK,2a13:cd80::,29,ipv6
 DK,2a13:cf80::,29,ipv6
 DK,2a13:ec80::,29,ipv6
@@ -47696,7 +47707,6 @@ RU,2a0e:b600::,29,ipv6
 RU,2a0e:b900::,29,ipv6
 RU,2a0e:ba00::,29,ipv6
 RU,2a0e:ba40::,29,ipv6
-RU,2a0e:bdc0::,29,ipv6
 RU,2a0e:c140::,29,ipv6
 RU,2a0e:c380::,29,ipv6
 RU,2a0e:c440::,29,ipv6
@@ -47723,7 +47733,6 @@ RU,2a0e:e6c0::,29,ipv6
 RU,2a0e:e9c0::,29,ipv6
 RU,2a0e:eac0::,29,ipv6
 RU,2a0e:eec0::,29,ipv6
-RU,2a0e:efc0::,29,ipv6
 RU,2a0e:f000::,29,ipv6
 RU,2a0e:f140::,29,ipv6
 RU,2a0e:f280::,29,ipv6
@@ -47747,7 +47756,6 @@ RU,2a0f:2600::,29,ipv6
 RU,2a0f:2e00::,29,ipv6
 RU,2a0f:3100::,29,ipv6
 RU,2a0f:3180::,29,ipv6
-RU,2a0f:3200::,29,ipv6
 RU,2a0f:3ac0::,29,ipv6
 RU,2a0f:3c40::,29,ipv6
 RU,2a0f:4000::,29,ipv6
@@ -47797,7 +47805,6 @@ RU,2a0f:9880::,29,ipv6
 RU,2a0f:9a40::,29,ipv6
 RU,2a0f:9c00::,29,ipv6
 RU,2a0f:9d00::,29,ipv6
-RU,2a0f:9dc0::,29,ipv6
 RU,2a0f:9ec0::,29,ipv6
 RU,2a0f:9f40::,29,ipv6
 RU,2a0f:a180::,29,ipv6
@@ -47805,7 +47812,6 @@ RU,2a0f:a280::,29,ipv6
 RU,2a0f:a3c0::,29,ipv6
 RU,2a0f:a480::,29,ipv6
 RU,2a0f:aa80::,29,ipv6
-RU,2a0f:ab80::,29,ipv6
 RU,2a0f:b4c0::,29,ipv6
 RU,2a0f:b5c0::,29,ipv6
 RU,2a0f:b740::,29,ipv6
@@ -47950,7 +47956,6 @@ RU,2a11:2c40::,29,ipv6
 RU,2a11:2d00::,29,ipv6
 RU,2a11:2d80::,29,ipv6
 RU,2a11:2e80::,29,ipv6
-RU,2a11:2f00::,29,ipv6
 RU,2a11:2f80::,29,ipv6
 RU,2a11:3080::,29,ipv6
 RU,2a11:30c0::,29,ipv6
@@ -62152,6 +62157,7 @@ ZA,2c0f:c00::,32,ipv6
 ZA,2c0f:c40::,32,ipv6
 ZA,2c0f:c80::,32,ipv6
 ZA,2c0f:d00::,32,ipv6
+ZA,2c0f:e40::,32,ipv6
 ZA,2c0f:e80::,32,ipv6
 ZA,2c0f:f80::,32,ipv6
 ZA,2001:4200::,32,ipv6
