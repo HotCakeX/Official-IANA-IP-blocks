@@ -16,16 +16,16 @@ $null = Get-ChildItem .\CIDR-IPAddress\IPV6 -Filter '*.txt' | Select-Object * | 
 git fetch origin gh-pages
 git checkout gh-pages
 
-$Date = Get-Date -AsUTC -UFormat "Year:%Y|Month:%m|Day:%d|Hour:%H|Minute:%M|Second:%S"
+$Date = Get-Date -AsUTC -UFormat 'Year:%Y|Month:%m|Day:%d|Hour:%H|Minute:%M|Second:%S'
 $content = Get-Content .\index.html -Raw
-$content = $content -replace "(?s)(?<=<!-- Info:START -->).*(?=<!-- Info:END -->)", "`nLast updated: $Date (UTC) <br>`n"
-$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV4:START -->).*(?=<!-- Country-IP-List-IPV4:END -->)", "`n$LIST_IPV4`n"
-$content = $content -replace "(?s)(?<=<!-- Country-IP-List-IPV6:START -->).*(?=<!-- Country-IP-List-IPV6:END -->)", "`n$LIST_IPV6`n"
+$content = $content -replace '(?s)(?<=<!-- Info:START -->).*(?=<!-- Info:END -->)', "`nLast updated: $Date (UTC) <br>`n"
+$content = $content -replace '(?s)(?<=<!-- Country-IP-List-IPV4:START -->).*(?=<!-- Country-IP-List-IPV4:END -->)', "`n$LIST_IPV4`n"
+$content = $content -replace '(?s)(?<=<!-- Country-IP-List-IPV6:START -->).*(?=<!-- Country-IP-List-IPV6:END -->)', "`n$LIST_IPV6`n"
 $null = Set-Content .\index.html -Value $content.TrimEnd()
 
 # Pushing the sources and list to main
-git config --global user.email "118815227+HotCakeX@users.noreply.github.com"
-git config --global user.name "HotCakeX"
+git config --global user.email '118815227+HotCakeX@users.noreply.github.com'
+git config --global user.name 'HotCakeX'
 git add --all
-git commit -m "updating list in index"
+git commit -m 'updating list in index'
 git push
