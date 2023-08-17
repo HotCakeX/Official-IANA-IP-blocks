@@ -47,8 +47,8 @@ $OFACSanctioned += Get-Content .\TXT\IPV6\ZW.txt #Zimbabwe
 Set-Content .\Curated-Lists\OFACSanctioned.txt -Value $OFACSanctioned -Force
 
 # Pushing the sources and list to main
-git config --global user.email "118815227+HotCakeX@users.noreply.github.com"
-git config --global user.name "HotCakeX"
+git config --global user.email 'spynetgirl@outlook.com'
+git config --global user.name 'HotCakeX'
 git add --all
-git commit -m "updating Curated lists"
+git commit -m 'updating Curated lists'
 git push
