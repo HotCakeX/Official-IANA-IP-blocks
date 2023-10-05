@@ -12,6 +12,8 @@
   - [State Sponsors of Terrorism countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/StateSponsorsOfTerrorism.txt) - [_official website_](https://www.state.gov/state-sponsors-of-terrorism/)
   - [OFAC Sanctioned Countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/OFACSanctioned.txt) - [_official website_](https://orpa.princeton.edu/export-controls/sanctioned-countries)
 
+[![Build](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml) [![CuratedLists](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml) [![pages-build-deployment](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment)
+
 <br>
 
 <p align="center"><img src="https://raw.githubusercontent.com/HotCakeX/Official-IANA-IP-blocks/main/rir-map.svg" width="500"></p>
