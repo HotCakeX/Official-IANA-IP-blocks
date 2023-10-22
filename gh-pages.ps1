@@ -24,7 +24,7 @@ $content = $content -replace '(?s)(?<=<!-- Country-IP-List-IPV6:START -->).*(?=<
 $null = Set-Content .\index.html -Value $content.TrimEnd()
 
 # Pushing the sources and list to main
-git config --global user.email '118815227+HotCakeX@users.noreply.github.com'
+git config --global user.email 'spynetgirl@outlook.com'
 git config --global user.name 'HotCakeX'
 git add --all
 git commit -m 'updating list in index'
