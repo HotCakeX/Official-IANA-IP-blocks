@@ -24,7 +24,7 @@ if (-NOT (Test-Path -Path '.\TXT\IPV6')) { New-Item -Path '.\TXT\IPV6' -ItemType
 
 #region download
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
-    Write-Host $_.Key = $_.Value -ForegroundColor Cyan
+    Write-Host -Object $_.Key = $_.Value -ForegroundColor Cyan
     $Content = Invoke-RestMethod -Uri $_.Value
     Set-Content ".\IANASources\$($_.Key).txt" -Value $Content -Force
 } -ThrottleLimit 5
@@ -33,8 +33,8 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 #region process
 $IpData = [System.Collections.Concurrent.ConcurrentBag[psobject]]::new()
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
-    Write-Host $_.Key -ForegroundColor DarkMagenta
-    $null = Get-Content ".\IANASources\$($_.Key).txt" | Where-Object -FilterScript { $_ -match 'allocated|assigned' } | ForEach-Object {
+    Write-Host -Object $_.Key -ForegroundColor DarkMagenta
+    $null = Get-Content -Path ".\IANASources\$($_.Key).txt" | Where-Object -FilterScript { $_ -match 'allocated|assigned' } | ForEach-Object {
         $Split = $_.Split('|')
         switch ($Split[2]) {
             'ipv4' {
@@ -72,8 +72,8 @@ Sort-Object country, version, {
 #endregion Sorting
 
 #region Countries
-Write-Host 'Countries' -ForegroundColor Green
-$ToExport = $IpData | Select-Object country -Unique
+Write-Host -Object 'Countries' -ForegroundColor Green
+$ToExport = $IpData | Select-Object -Property country -Unique
 $ToExport | Export-Csv -Path '.\CSV\countries.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json | Out-File -Path '.\JSON\countries.json' -Force
 $list = ''
@@ -84,47 +84,47 @@ $list.Trim() | Out-File -Path '.\TXT\countries.txt' -Force
 #endregion Countries
 
 #region Global
-Write-Host 'Global' -ForegroundColor Green
-$ToExport = $IpData | Select-Object country, ip, prefixlength, version
+Write-Host -Object 'Global' -ForegroundColor Green
+$ToExport = $IpData | Select-Object -Property country, ip, prefixlength, version
 $ToExport | Export-Csv -Path '.\CSV\global.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global.json' -Force
 $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_compressed.json' -Force
 #endregion Global
 
 #region GlobalIPV4
-Write-Host 'GlobalIPV4' -ForegroundColor Green
-$ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Select-Object country, ip, prefixlength, version
+Write-Host -Object 'GlobalIPV4' -ForegroundColor Green
+$ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Select-Object -Property country, ip, prefixlength, version
 $ToExport | Export-Csv -Path '.\CSV\global_ipv4.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv4.json' -Force
 $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv4_compressed.json' -Force
 #endregion
 
 #region GlobalIPV6
-Write-Host 'GlobalIPV6' -ForegroundColor Green
-$ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Select-Object country, ip, prefixlength, version
+Write-Host -Object 'GlobalIPV6' -ForegroundColor Green
+$ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Select-Object -Property country, ip, prefixlength, version
 $ToExport | Export-Csv -Path '.\CSV\global_ipv6.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv6.json' -Force
 $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv6_compressed.json' -Force
 #endregion GlobalIPV6
 
 #region CountryIPV4
-Write-Host 'CountryIPV4' -ForegroundColor Green
+Write-Host -Object 'CountryIPV4' -ForegroundColor Green
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
-    $_.Group | Select-Object country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
-    $_.Group | Select-Object country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
     $list = ''
-    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
     $list.Trim() | Out-File -Path ".\TXT\IPV4\$($_.Name).txt" -Force
 } -ThrottleLimit 32
 #endregion CountryIPV4
 
 #region CountryIPV6
-Write-Host 'CountryIPV6' -ForegroundColor Green
+Write-Host -Object 'CountryIPV6' -ForegroundColor Green
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
-    $_.Group | Select-Object country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
-    $_.Group | Select-Object country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
     $list = ''
-    $_.Group | Select-Object country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object -Process { $list += "$($_.ip)/$($_.prefixlength)`n" }
     $list.Trim() | Out-File -Path ".\TXT\IPV6\$($_.Name).txt" -Force
 } -ThrottleLimit 32
 #endregion CountryIPV6
