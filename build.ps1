@@ -1,4 +1,3 @@
-$ProgressPreference = 'SilentlyContinue'
 $ErrorActionPreference = 'Stop'
 
 # A hash table of regions and their respective URLs
@@ -24,9 +23,8 @@ if (-NOT (Test-Path -Path '.\TXT\IPV6')) { New-Item -Path '.\TXT\IPV6' -ItemType
 
 #region download
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
-    Write-Host -Object $_.Key = $_.Value -ForegroundColor Cyan
-    $Content = Invoke-RestMethod -Uri $_.Value
-    Set-Content ".\IANASources\$($_.Key).txt" -Value $Content -Force
+    Write-Host -Object "Downloading $($_.Key)" -ForegroundColor Cyan
+    Invoke-RestMethod -Uri $_.Value -OutFile ".\IANASources\$($_.Key).txt"
 } -ThrottleLimit 5
 #endregion download
 
