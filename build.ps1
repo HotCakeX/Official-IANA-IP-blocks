@@ -32,7 +32,7 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 $IpData = [System.Collections.Concurrent.ConcurrentBag[psobject]]::new()
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
     Write-Host -Object $_.Key -ForegroundColor DarkMagenta
-    $null = Get-Content -Path ".\IANASources\$($_.Key).txt" | Where-Object -FilterScript { $_ -match 'allocated|assigned' } | ForEach-Object {
+    $null = Get-Content -Path ".\IANASources\$($_.Key).txt" | Where-Object -FilterScript { $_ -match 'allocated|assigned' } | ForEach-Object -Process {
         $Split = $_.Split('|')
         switch ($Split[2]) {
             'ipv4' {
@@ -40,7 +40,7 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
                         'country'      = $Split[1]
                         'version'      = $Split[2]
                         'ip'           = $Split[3]
-                        'prefixlength' = [string][math]::Round((32 - [Math]::Log($Split[4], 2)))
+                        'prefixlength' = [System.String][math]::Round((32 - [Math]::Log($Split[4], 2)))
                     })
             }
             'ipv6' {
@@ -57,25 +57,24 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 #endregion Process
 
 #region Sorting
-Write-Output 'Sorting ipData'
-$IpData = $IpData |
-Sort-Object country, version, {
+Write-Host -Object 'Sorting IpData' -ForegroundColor Yellow
+$IpData = $IpData | Sort-Object -Property country, version, {
     if ($_.version -eq 'ipv4') {
-        $_.ip -as [version]
+        $_.ip -as [System.Version]
     }
     else {
-        [int64]('0x' + $_.ip.Replace(':', ''))
+        [System.Int64]('0x' + $_.ip.Replace(':', ''))
     }
 }
 #endregion Sorting
 
 #region Countries
 Write-Host -Object 'Countries' -ForegroundColor Green
-$ToExport = $IpData | Select-Object -Property country -Unique
+[System.Object[]]$ToExport = $IpData | Select-Object -Property country -Unique
 $ToExport | Export-Csv -Path '.\CSV\countries.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json | Out-File -Path '.\JSON\countries.json' -Force
-$list = ''
-$ToExport | ForEach-Object {
+[System.String[]]$list = @()
+$ToExport | ForEach-Object -Process {
     $list += "$($_.country)`n"
 }
 $list.Trim() | Out-File -Path '.\TXT\countries.txt' -Force
