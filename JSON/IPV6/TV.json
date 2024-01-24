@@ -1,8 +1,14 @@
 [
   {
     "country": "TV",
-    "ip": "202.2.96.0",
-    "prefixlength": "19",
-    "version": "ipv4"
+    "ip": "2400:3500::",
+    "prefixlength": "32",
+    "version": "ipv6"
+  },
+  {
+    "country": "TV",
+    "ip": "2001:df2:ff80::",
+    "prefixlength": "48",
+    "version": "ipv6"
   }
 ]
