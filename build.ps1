@@ -9,7 +9,7 @@ $Regions_Delegated = [ordered]@{
     'delegated-lacnic-latest'        = 'https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest'
 }
 
-# Create the required directories
+# Create the required directories if they don't exist
 if (-NOT (Test-Path -Path '.\IANASources')) { New-Item -Path '.\IANASources' -ItemType Directory -Force | Out-Null }
 if (-NOT (Test-Path -Path '.\CSV')) { New-Item -Path '.\CSV' -ItemType Directory -Force | Out-Null }
 if (-NOT (Test-Path -Path '.\CSV\IPV4')) { New-Item -Path '.\CSV\IPV4' -ItemType Directory -Force | Out-Null }
@@ -73,7 +73,7 @@ Write-Host -Object 'Countries' -ForegroundColor Green
 [System.Object[]]$ToExport = $IpData | Select-Object -Property country -Unique
 $ToExport | Export-Csv -Path '.\CSV\countries.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json | Out-File -Path '.\JSON\countries.json' -Force
-[System.String[]]$list = @()
+$list = ''
 $ToExport | ForEach-Object -Process {
     $list += "$($_.country)`n"
 }
@@ -110,7 +110,7 @@ $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -P
     $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
     $list = ''
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object { $list += "$($_.ip)/$($_.prefixlength)`n" }
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object -Process { $list += "$($_.ip)/$($_.prefixlength)`n" }
     $list.Trim() | Out-File -Path ".\TXT\IPV4\$($_.Name).txt" -Force
 } -ThrottleLimit 32
 #endregion CountryIPV4
