@@ -9,7 +9,7 @@ jobs:
     name: Run gh-pages
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: gh-pages
         run: |
           .\gh-pages.ps1
