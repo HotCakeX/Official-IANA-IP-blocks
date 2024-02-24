@@ -1,6 +1,6 @@
-2|lacnic|20240222|46256|19870101|20240222|-0300
-lacnic|*|ipv4|*|19310|summary
-lacnic|*|ipv6|*|12644|summary
+2|lacnic|20240223|46253|19870101|20240223|-0300
+lacnic|*|ipv4|*|19311|summary
+lacnic|*|ipv6|*|12640|summary
 lacnic|*|asn|*|14302|summary
 lacnic|BR|ipv4|24.152.0.0|1024|20200310|allocated
 lacnic|BR|ipv4|24.152.4.0|1024|20200312|allocated
@@ -13094,6 +13094,7 @@ lacnic|BR|ipv4|189.84.32.0|1024|20200319|allocated
 lacnic|BR|ipv4|189.84.36.0|1024|20200319|allocated
 lacnic|BR|ipv4|189.84.40.0|1024|20200319|allocated
 lacnic|BR|ipv4|189.84.44.0|1024|20200319|allocated
+lacnic|PE|ipv4|189.84.52.0|512|20240223|allocated
 lacnic|BR|ipv4|189.84.54.0|512|20240219|allocated
 lacnic|BR|ipv4|189.84.56.0|1024|20240122|allocated
 lacnic|BR|ipv4|189.84.64.0|4096|20140526|allocated
@@ -20165,7 +20166,6 @@ lacnic|BR|ipv6|2801:80::|48|20081201|assigned
 lacnic|BR|ipv6|2801:80:10::|48|20081201|assigned
 lacnic|BR|ipv6|2801:80:30::|48|20090508|assigned
 lacnic|BR|ipv6|2801:80:50::|48|20100115|assigned
-lacnic|BR|ipv6|2801:80:60::|48|20100115|assigned
 lacnic|BR|ipv6|2801:80:70::|48|20100323|assigned
 lacnic|BR|ipv6|2801:80:80::|48|20100524|assigned
 lacnic|BR|ipv6|2801:80:90::|48|20100525|assigned
@@ -24854,7 +24854,6 @@ lacnic|BR|ipv6|2804:1a04::|32|20140701|allocated
 lacnic|BR|ipv6|2804:1a10::|32|20140702|allocated
 lacnic|BR|ipv6|2804:1a14::|32|20140702|allocated
 lacnic|BR|ipv6|2804:1a18::|32|20140703|allocated
-lacnic|BR|ipv6|2804:1a1c::|32|20140703|allocated
 lacnic|BR|ipv6|2804:1a20::|32|20140703|allocated
 lacnic|BR|ipv6|2804:1a24::|32|20140703|allocated
 lacnic|BR|ipv6|2804:1a28::|32|20140703|allocated
@@ -25147,6 +25146,7 @@ lacnic|BR|ipv6|2804:1f3c:4000::|35|20191223|assigned
 lacnic|BR|ipv6|2804:1f3c:8000::|40|20221205|assigned
 lacnic|BR|ipv6|2804:1f3c:8200::|40|20221226|assigned
 lacnic|BR|ipv6|2804:1f3c:8400::|39|20240108|assigned
+lacnic|BR|ipv6|2804:1f3c:8800::|40|20240223|assigned
 lacnic|BR|ipv6|2804:1f3c:c000::|35|20230518|assigned
 lacnic|BR|ipv6|2804:1f3e::|32|20190910|assigned
 lacnic|BR|ipv6|2804:1f40::|32|20200221|assigned
@@ -25793,7 +25793,6 @@ lacnic|BR|ipv6|2804:2b64::|32|20151119|allocated
 lacnic|BR|ipv6|2804:2b68::|32|20151123|allocated
 lacnic|BR|ipv6|2804:2b6c::|32|20151124|allocated
 lacnic|BR|ipv6|2804:2b70::|32|20151125|allocated
-lacnic|BR|ipv6|2804:2b74::|32|20151125|allocated
 lacnic|BR|ipv6|2804:2b78::|32|20151126|allocated
 lacnic|BR|ipv6|2804:2b7c::|32|20151126|allocated
 lacnic|BR|ipv6|2804:2b84::|32|20151126|allocated
@@ -26991,7 +26990,6 @@ lacnic|BR|ipv6|2804:40a8::|32|20170717|allocated
 lacnic|BR|ipv6|2804:40ac::|32|20170717|allocated
 lacnic|BR|ipv6|2804:40b0::|32|20170718|allocated
 lacnic|BR|ipv6|2804:40b4::|32|20170718|allocated
-lacnic|BR|ipv6|2804:40b8::|32|20170718|allocated
 lacnic|BR|ipv6|2804:40bc::|32|20170718|allocated
 lacnic|BR|ipv6|2804:40c0::|32|20170718|allocated
 lacnic|BR|ipv6|2804:40c4::|32|20170719|allocated
@@ -27506,7 +27504,6 @@ lacnic|BR|ipv6|2804:498c::|32|20180208|allocated
 lacnic|BR|ipv6|2804:4990::|32|20180208|allocated
 lacnic|BR|ipv6|2804:4994::|32|20180209|allocated
 lacnic|BR|ipv6|2804:4998::|32|20180209|allocated
-lacnic|BR|ipv6|2804:499c::|32|20180209|allocated
 lacnic|BR|ipv6|2804:49a0::|32|20180209|allocated
 lacnic|BR|ipv6|2804:49a4::|32|20180215|allocated
 lacnic|BR|ipv6|2804:49a8::|32|20180215|allocated
@@ -37432,7 +37429,6 @@ lacnic|BR|asn|265150|1|20151118|allocated
 lacnic|BR|asn|265151|1|20151119|allocated
 lacnic|BR|asn|265152|1|20151123|allocated
 lacnic|BR|asn|265153|1|20151125|allocated
-lacnic|BR|asn|265154|1|20151125|allocated
 lacnic|BR|asn|265155|1|20151126|allocated
 lacnic|BR|asn|265157|1|20151126|allocated
 lacnic|BR|asn|265158|1|20151126|allocated
@@ -38173,7 +38169,6 @@ lacnic|BR|asn|265973|1|20170717|allocated
 lacnic|BR|asn|265974|1|20170717|allocated
 lacnic|BR|asn|265975|1|20170718|allocated
 lacnic|BR|asn|265976|1|20170718|allocated
-lacnic|BR|asn|265977|1|20170718|allocated
 lacnic|BR|asn|265978|1|20170718|allocated
 lacnic|BR|asn|265979|1|20170718|allocated
 lacnic|BR|asn|265980|1|20170719|allocated
