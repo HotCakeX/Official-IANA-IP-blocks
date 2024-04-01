@@ -25,10 +25,10 @@
 #
 ######################################################################
 #
-2|apnic|20240401|78247|19830613|20240331|+1000
+2|apnic|20240402|78255|19830613|20240401|+1000
 apnic|*|asn|*|12425|summary
-apnic|*|ipv4|*|50883|summary
-apnic|*|ipv6|*|14939|summary
+apnic|*|ipv4|*|50887|summary
+apnic|*|ipv6|*|14943|summary
 apnic|JP|asn|173|1|20020801|allocated
 apnic|NZ|asn|681|1|20020801|allocated
 apnic|AU|asn|1221|1|20000131|allocated
@@ -48155,6 +48155,10 @@ apnic|ID|ipv4|157.66.38.0|512|20240328|assigned
 apnic|ID|ipv4|157.66.40.0|512|20240328|assigned
 apnic|CN|ipv4|157.66.42.0|512|20240329|allocated
 apnic|IN|ipv4|157.66.44.0|512|20240331|allocated
+apnic|VN|ipv4|157.66.46.0|512|20240331|allocated
+apnic|VN|ipv4|157.66.48.0|512|20240331|allocated
+apnic|ID|ipv4|157.66.50.0|512|20240401|allocated
+apnic|ID|ipv4|157.66.52.0|512|20240401|allocated
 apnic|JP|ipv4|157.67.0.0|65536|19920210|allocated
 apnic|JP|ipv4|157.68.0.0|65536|19920210|allocated
 apnic|JP|ipv4|157.69.0.0|65536|19920210|allocated
@@ -67618,6 +67622,7 @@ apnic|PH|ipv6|2001:df3:a001::|48|20131009|assigned
 apnic|PH|ipv6|2001:df3:a002::|47|20131009|assigned
 apnic|IN|ipv6|2001:df3:a040::|48|20240328|assigned
 apnic|ID|ipv6|2001:df3:a080::|48|20200504|assigned
+apnic|IN|ipv6|2001:df3:a0c0::|48|20240401|assigned
 apnic|ID|ipv6|2001:df3:a100::|48|20171220|assigned
 apnic|BD|ipv6|2001:df3:a180::|48|20200505|assigned
 apnic|IN|ipv6|2001:df3:a200::|48|20160727|assigned
@@ -72349,8 +72354,11 @@ apnic|VN|ipv6|2401:8e60::|32|20240328|allocated
 apnic|PH|ipv6|2401:8e80::|32|20140912|allocated
 apnic|IN|ipv6|2401:8ea0::|32|20240328|allocated
 apnic|AU|ipv6|2401:8ec0::|32|20170726|allocated
+apnic|IN|ipv6|2401:8ee0::|32|20240331|allocated
 apnic|ID|ipv6|2401:8f00::|32|20110726|allocated
+apnic|VN|ipv6|2401:8f20::|32|20240331|allocated
 apnic|CN|ipv6|2401:8f40::|32|20170726|allocated
+apnic|VN|ipv6|2401:8f60::|32|20240331|allocated
 apnic|CN|ipv6|2401:8fc0::|32|20170727|allocated
 apnic|AU|ipv6|2401:9040::|32|20170727|allocated
 apnic|AU|ipv6|2401:9080::|32|20140915|allocated
