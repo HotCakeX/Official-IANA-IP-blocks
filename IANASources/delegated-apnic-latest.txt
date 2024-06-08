@@ -25,10 +25,10 @@
 #
 ######################################################################
 #
-2|apnic|20240608|78837|19830613|20240607|+1000
-apnic|*|asn|*|12524|summary
-apnic|*|ipv4|*|51189|summary
-apnic|*|ipv6|*|15124|summary
+2|apnic|20240609|78848|19830613|20240608|+1000
+apnic|*|asn|*|12526|summary
+apnic|*|ipv4|*|51197|summary
+apnic|*|ipv6|*|15125|summary
 apnic|JP|asn|173|1|20020801|allocated
 apnic|NZ|asn|681|1|20020801|allocated
 apnic|AU|asn|1221|1|20000131|allocated
@@ -12553,6 +12553,8 @@ apnic|AU|asn|152902|1|20240605|allocated
 apnic|SG|asn|152903|1|20240605|allocated
 apnic|AU|asn|152904|1|20240606|allocated
 apnic|HK|asn|152905|1|20240606|allocated
+apnic|BD|asn|152906|1|20240607|allocated
+apnic|PH|asn|152907|1|20240608|allocated
 apnic|AU|ipv4|1.0.0.0|256|20110811|assigned
 apnic|CN|ipv4|1.0.1.0|256|20110414|allocated
 apnic|CN|ipv4|1.0.2.0|512|20110414|allocated
@@ -48770,6 +48772,14 @@ apnic|CN|ipv4|160.22.82.0|512|20240606|allocated
 apnic|IN|ipv4|160.22.84.0|512|20240606|assigned
 apnic|IN|ipv4|160.22.86.0|512|20240606|allocated
 apnic|US|ipv4|160.22.88.0|512|20240606|allocated
+apnic|ID|ipv4|160.22.90.0|256|20240607|assigned
+apnic|ID|ipv4|160.22.91.0|256|20240607|assigned
+apnic|ID|ipv4|160.22.92.0|512|20240607|assigned
+apnic|ID|ipv4|160.22.94.0|512|20240607|assigned
+apnic|ID|ipv4|160.22.96.0|512|20240607|assigned
+apnic|ID|ipv4|160.22.98.0|512|20240607|assigned
+apnic|ID|ipv4|160.22.100.0|256|20240607|assigned
+apnic|VN|ipv4|160.22.102.0|512|20240608|assigned
 apnic|JP|ipv4|160.23.0.0|65536|19920624|allocated
 apnic|JP|ipv4|160.24.0.0|65536|19920624|allocated
 apnic|JP|ipv4|160.26.0.0|65536|19920625|allocated
@@ -68277,6 +68287,7 @@ apnic|ID|ipv6|2001:df3:e540::|48|20240607|assigned
 apnic|AU|ipv6|2001:df3:e580::|48|20200605|assigned
 apnic|ID|ipv6|2001:df3:e5c0::|48|20240607|assigned
 apnic|ID|ipv6|2001:df3:e600::|48|20160808|assigned
+apnic|VN|ipv6|2001:df3:e640::|48|20240608|assigned
 apnic|BD|ipv6|2001:df3:e680::|48|20200608|assigned
 apnic|ID|ipv6|2001:df3:e700::|48|20180117|assigned
 apnic|AU|ipv6|2001:df3:e780::|48|20200608|assigned
