@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
-# A hash table of regions and their respective URLs
-$Regions_Delegated = [ordered]@{
+# A dictionary of regions and their respective URLs
+$Regions_Delegated = [System.Collections.Hashtable]@{
     'delegated-apnic-latest'         = 'https://ftp.apnic.net/stats/apnic/delegated-apnic-latest'
     'delegated-arin-extended-latest' = 'https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest'
     'delegated-ripencc-latest'       = 'https://ftp.ripe.net/ripe/stats/delegated-ripencc-latest'
@@ -31,27 +31,38 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 
 #region process
 $IpData = [System.Collections.Concurrent.ConcurrentBag[psobject]]::new()
+
+# Loop over each continent's name from the HashTable
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
+
     Write-Host -Object $_.Key -ForegroundColor DarkMagenta
-    $null = Get-Content -Path ".\IANASources\$($_.Key).txt" | Where-Object -FilterScript { $_ -match 'allocated|assigned' } | ForEach-Object -Process {
-        $Split = $_.Split('|')
-        switch ($Split[2]) {
-            'ipv4' {
-                ($using:ipData).Add(@{
-                        'country'      = $Split[1]
-                        'version'      = $Split[2]
-                        'ip'           = $Split[3]
-                        'prefixlength' = [System.String][math]::Round((32 - [Math]::Log($Split[4], 2)))
-                    })
+
+    # Loop over each line in the continent's IP info
+    $null = foreach ($Item in Get-Content -Path ".\IANASources\$($_.Key).txt") {
+
+        if ($Item -match 'allocated|assigned' ) {
+
+            [System.String[]]$Split = $Item.Split('|')
+
+            switch ($Split[2]) {
+                'ipv4' {
+                    ($using:ipData).Add(@{
+                            'country'      = $Split[1]
+                            'version'      = $Split[2]
+                            'ip'           = $Split[3]
+                            'prefixlength' = [System.String][math]::Round((32 - [Math]::Log($Split[4], 2)))
+                        })
+                }
+                'ipv6' {
+                    ($using:ipData).Add(@{
+                            'country'      = $Split[1]
+                            'version'      = $Split[2]
+                            'ip'           = $Split[3]
+                            'prefixlength' = $Split[4]
+                        })
+                }
             }
-            'ipv6' {
-                ($using:ipData).Add(@{
-                        'country'      = $Split[1]
-                        'version'      = $Split[2]
-                        'ip'           = $Split[3]
-                        'prefixlength' = $Split[4]
-                    })
-            }
+
         }
     }
 } -ThrottleLimit 32
@@ -74,10 +85,11 @@ Write-Host -Object 'Countries' -ForegroundColor Green
 [System.Object[]]$ToExport = $IpData | Select-Object -Property country -Unique
 $ToExport | Export-Csv -Path '.\CSV\countries.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json | Out-File -Path '.\JSON\countries.json' -Force
-[System.String[]]$list = @()
-$ToExport | ForEach-Object -Process {
-    $list += "$($_.country)`n"
+
+[System.String[]]$list = foreach ($Item in $ToExport) {
+    "$($Item.country)`n"
 }
+
 $list.Trim() | Out-File -Path '.\TXT\countries.txt' -Force
 #endregion Countries
 
@@ -99,7 +111,13 @@ $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ip
 
 #region GlobalIPV6
 Write-Host -Object 'GlobalIPV6' -ForegroundColor Green
-$ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Select-Object -Property country, ip, prefixlength, version
+$ToExport = foreach ($Item in $IpData) {
+    if ($Item.version -eq 'ipv6') {
+        $Item
+    }
+}
+$ToExport = $ToExport | Select-Object -Property country, ip, prefixlength, version
+
 $ToExport | Export-Csv -Path '.\CSV\global_ipv6.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv6.json' -Force
 $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv6_compressed.json' -Force
