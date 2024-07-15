@@ -129,7 +129,7 @@ Write-Host -Object 'CountryIPV4' -ForegroundColor Green
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV4\$($_.Name).json" -Force
-   
+
     $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
         "$($Item.ip)/$($Item.prefixlength)`n"
     }
@@ -144,7 +144,7 @@ Write-Host -Object 'CountryIPV6' -ForegroundColor Green
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
-    
+
     $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
         "$($Item.ip)/$($Item.prefixlength)`n"
     }
