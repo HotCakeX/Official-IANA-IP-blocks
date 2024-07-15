@@ -65,7 +65,7 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 
         }
     }
-} -ThrottleLimit 32
+} -ThrottleLimit ($Regions_Delegated.Count)
 #endregion Process
 
 #region Sorting
@@ -107,7 +107,7 @@ $ToExport = $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Sel
 $ToExport | Export-Csv -Path '.\CSV\global_ipv4.csv' -Force -UseQuotes:AsNeeded
 $ToExport | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv4.json' -Force
 $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv4_compressed.json' -Force
-#endregion
+#endregion GlobalIPV4
 
 #region GlobalIPV6
 Write-Host -Object 'GlobalIPV6' -ForegroundColor Green
@@ -125,22 +125,30 @@ $ToExport | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ip
 
 #region CountryIPV4
 Write-Host -Object 'CountryIPV4' -ForegroundColor Green
+# loop over data grouped by country in parallel
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
-    $List = ''
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object -Process { $List += "$($_.ip)/$($_.prefixlength)`n" }
+    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV4\$($_.Name).json" -Force
+   
+    $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
+        "$($Item.ip)/$($Item.prefixlength)`n"
+    }
     $List.Trim() | Out-File -Path ".\TXT\IPV4\$($_.Name).txt" -Force
+
 } -ThrottleLimit 32
 #endregion CountryIPV4
 
 #region CountryIPV6
 Write-Host -Object 'CountryIPV6' -ForegroundColor Green
+# loop over data grouped by country in parallel
 $IpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
-    $List = ''
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ForEach-Object -Process { $List += "$($_.ip)/$($_.prefixlength)`n" }
+    
+    $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
+        "$($Item.ip)/$($Item.prefixlength)`n"
+    }
     $List.Trim() | Out-File -Path ".\TXT\IPV6\$($_.Name).txt" -Force
+
 } -ThrottleLimit 32
 #endregion CountryIPV6
