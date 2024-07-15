@@ -153,7 +153,7 @@ $GlobalDataIPv6 | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\glo
 #region CountryIPV4
 Write-Host -Object 'CountryIPV4' -ForegroundColor Green
 # loop over data grouped by country in parallel
-$SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
+$SortedIpData.Where({ $_.version -eq 'ipv4' }) | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV4\$($_.Name).json" -Force
 
@@ -168,7 +168,7 @@ $SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Obj
 #region CountryIPV6
 Write-Host -Object 'CountryIPV6' -ForegroundColor Green
 # loop over data grouped by country in parallel
-$SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
+$SortedIpData.Where({ $_.version -eq 'ipv6' }) | Group-Object -Property 'country' | ForEach-Object -Parallel {
     $_.Group | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
     $_.Group | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
 
