@@ -1,5 +1,26 @@
 $ErrorActionPreference = 'Stop'
 
+Add-Type -TypeDefinition @'
+using System;
+namespace IPConfig
+{
+    public class Package
+    {
+        public string Country { get; set; }
+        public string IP { get; set; }
+        public string PrefixLength { get; set; }
+        public string Version { get; set; }
+        public Package(string country, string ip, string prefixlength, string version )
+        {
+            Country = country;
+            IP = ip;
+            PrefixLength = prefixlength;
+            Version = version;
+        }
+    }
+}
+'@
+
 # A HashTable of regions and their respective URLs
 $Regions_Delegated = [System.Collections.Hashtable]@{
     'delegated-apnic-latest'         = 'https://ftp.apnic.net/stats/apnic/delegated-apnic-latest'
@@ -30,7 +51,10 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 #endregion download
 
 #region process
-$IpData = [System.Collections.Concurrent.ConcurrentBag[PSObject]]::new()
+$IpData = [System.Collections.Concurrent.ConcurrentBag[IPConfig.Package]]::new()
+
+$Pattern = 'allocated|assigned'
+$Regex = [regex]::new($Pattern, [System.Text.RegularExpressions.RegexOptions]::Compiled)
 
 # Loop over each continent's name from the HashTable
 $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
@@ -40,26 +64,26 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
     # Loop over each line in the continent's IP info
     $null = foreach ($Item in Get-Content -Path ".\IANASources\$($_.Key).txt") {
 
-        if ($Item -match 'allocated|assigned' ) {
+        if (($using:regex).IsMatch($Item)) {
 
             [System.String[]]$Split = $Item.Split('|')
 
             switch ($Split[2]) {
                 'ipv4' {
-                    ($using:ipData).Add(@{
-                            'country'      = $Split[1]
-                            'version'      = $Split[2]
-                            'ip'           = $Split[3]
-                            'prefixlength' = [System.String][math]::Round((32 - [Math]::Log($Split[4], 2)))
-                        })
+                    ($using:ipData).Add([IPConfig.Package]::New(
+                            $Split[1],
+                            $Split[3],
+                            [System.String][math]::Round((32 - [Math]::Log($Split[4], 2))),
+                            $Split[2]
+                        ))
                 }
                 'ipv6' {
-                    ($using:ipData).Add(@{
-                            'country'      = $Split[1]
-                            'version'      = $Split[2]
-                            'ip'           = $Split[3]
-                            'prefixlength' = $Split[4]
-                        })
+                    ($using:ipData).Add([IPConfig.Package]::New(
+                            $Split[1],
+                            $Split[3],
+                            $Split[4],
+                            $Split[2]
+                        ))
                 }
             }
 
@@ -70,7 +94,7 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
 
 #region Sorting
 Write-Host -Object 'Sorting IpData' -ForegroundColor Yellow
-$SortedIpData = $IpData | Sort-Object -Property country, version, {
+[System.Collections.Generic.List[IPConfig.Package]]$SortedIpData = $IpData | Sort-Object -Property country, version, {
     if ($_.version -eq 'ipv4') {
         $_.ip -as [System.Version]
     }
@@ -95,10 +119,9 @@ $CountriesListText.Trim() | Out-File -Path '.\TXT\countries.txt' -Force
 
 #region Global
 Write-Host -Object 'Exporting Aggregated Global Data' -ForegroundColor Green
-$GlobalData = $SortedIpData | Select-Object -Property country, ip, prefixlength, version
-$GlobalData | Export-Csv -Path '.\CSV\global.csv' -Force -UseQuotes:AsNeeded
-$GlobalData | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global.json' -Force
-$GlobalData | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_compressed.json' -Force
+$SortedIpData | Export-Csv -Path '.\CSV\global.csv' -Force -UseQuotes:AsNeeded
+$SortedIpData | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global.json' -Force
+$SortedIpData | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_compressed.json' -Force
 #endregion Global
 
 #region GlobalIPV4
@@ -109,8 +132,6 @@ $GlobalDataIPv4 = foreach ($Item in $SortedIpData) {
         $Item
     }
 }
-$GlobalDataIPv4 = $GlobalDataIPv4 | Select-Object -Property country, ip, prefixlength, version
-
 $GlobalDataIPv4 | Export-Csv -Path '.\CSV\global_ipv4.csv' -Force -UseQuotes:AsNeeded
 $GlobalDataIPv4 | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv4.json' -Force
 $GlobalDataIPv4 | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv4_compressed.json' -Force
@@ -124,8 +145,6 @@ $GlobalDataIPv6 = foreach ($Item in $SortedIpData) {
         $Item
     }
 }
-$GlobalDataIPv6 = $GlobalDataIPv6 | Select-Object -Property country, ip, prefixlength, version
-
 $GlobalDataIPv6 | Export-Csv -Path '.\CSV\global_ipv6.csv' -Force -UseQuotes:AsNeeded
 $GlobalDataIPv6 | ConvertTo-Json -AsArray | Out-File -Path '.\JSON\global_ipv6.json' -Force
 $GlobalDataIPv6 | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\global_ipv6_compressed.json' -Force
@@ -135,10 +154,10 @@ $GlobalDataIPv6 | ConvertTo-Json -AsArray -Compress | Out-File -Path '.\JSON\glo
 Write-Host -Object 'CountryIPV4' -ForegroundColor Green
 # loop over data grouped by country in parallel
 $SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV4\$($_.Name).json" -Force
+    $_.Group | Export-Csv -Path ".\CSV\IPV4\$($_.Name).csv" -Force -UseQuotes:AsNeeded
+    $_.Group | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV4\$($_.Name).json" -Force
 
-    $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
+    $List = foreach ($Item in ($_.Group)) {
         "$($Item.ip)/$($Item.prefixlength)`n"
     }
     $List.Trim() | Out-File -Path ".\TXT\IPV4\$($_.Name).txt" -Force
@@ -150,10 +169,10 @@ $SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv4' } | Group-Obj
 Write-Host -Object 'CountryIPV6' -ForegroundColor Green
 # loop over data grouped by country in parallel
 $SortedIpData | Where-Object -FilterScript { $_.version -EQ 'ipv6' } | Group-Object -Property 'country' | ForEach-Object -Parallel {
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
-    $_.Group | Select-Object -Property country, ip, prefixlength, version | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
+    $_.Group | Export-Csv -Path ".\CSV\IPV6\$($_.Name).csv" -Force -UseQuotes:AsNeeded
+    $_.Group | ConvertTo-Json -AsArray | Out-File -Path ".\JSON\IPV6\$($_.Name).json" -Force
 
-    $List = foreach ($Item in ($_.Group | Select-Object -Property country, ip, prefixlength, version)) {
+    $List = foreach ($Item in ($_.Group)) {
         "$($Item.ip)/$($Item.prefixlength)`n"
     }
     $List.Trim() | Out-File -Path ".\TXT\IPV6\$($_.Name).txt" -Force
