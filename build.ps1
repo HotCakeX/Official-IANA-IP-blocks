@@ -77,11 +77,10 @@ $Regions_Delegated.GetEnumerator() | ForEach-Object -Parallel {
                             'country'      = $Split[1]
                             'version'      = $Split[2]
                             'ip'           = $Split[3]
-                            'prefixlength' = [System.String][math]::Round((32 - [Math]::Log($Split[4], 2)))
+                            'prefixlength' = $Split[4]
                         })
                 }
             }
-
         }
     }
 } -ThrottleLimit ($Regions_Delegated.Count)
