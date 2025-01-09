@@ -1,6 +1,6 @@
-2|lacnic|20250107|47371|19870101|20250107|-0300
-lacnic|*|ipv4|*|19497|summary
-lacnic|*|ipv6|*|12974|summary
+2|lacnic|20250108|47371|19870101|20250107|-0300
+lacnic|*|ipv4|*|19498|summary
+lacnic|*|ipv6|*|12973|summary
 lacnic|*|asn|*|14900|summary
 lacnic|DO|ipv4|5.183.80.0|1024|20240711|allocated
 lacnic|BR|ipv4|24.152.0.0|1024|20200310|allocated
@@ -5898,7 +5898,8 @@ lacnic|MX|ipv4|148.222.8.0|2048|19921221|assigned
 lacnic|MX|ipv4|148.222.16.0|4096|19921221|assigned
 lacnic|MX|ipv4|148.222.32.0|2048|19921221|assigned
 lacnic|MX|ipv4|148.222.44.0|1024|19921221|assigned
-lacnic|MX|ipv4|148.222.48.0|4096|19921221|assigned
+lacnic|MX|ipv4|148.222.48.0|1024|19921221|assigned
+lacnic|MX|ipv4|148.222.56.0|2048|19921221|assigned
 lacnic|PE|ipv4|148.222.112.0|2048|19921221|allocated
 lacnic|MX|ipv4|148.222.124.0|1024|19921221|assigned
 lacnic|CL|ipv4|148.222.128.0|2048|19921221|allocated
@@ -5906,8 +5907,8 @@ lacnic|DO|ipv4|148.222.136.0|1024|19921221|allocated
 lacnic|MX|ipv4|148.222.140.0|1024|19921221|assigned
 lacnic|MX|ipv4|148.222.144.0|4096|19921221|assigned
 lacnic|MX|ipv4|148.222.160.0|4096|19921221|assigned
-lacnic|MX|ipv4|148.222.176.0|2048|20250102|assigned
-lacnic|MX|ipv4|148.222.188.0|1024|20250102|assigned
+lacnic|MX|ipv4|148.222.176.0|2048|19921221|assigned
+lacnic|MX|ipv4|148.222.188.0|1024|19921221|assigned
 lacnic|CL|ipv4|148.222.192.0|8192|19921221|allocated
 lacnic|CO|ipv4|148.222.224.0|1024|19921221|allocated
 lacnic|PE|ipv4|148.222.228.0|512|19921221|allocated
@@ -29364,7 +29365,6 @@ lacnic|BR|ipv6|2804:6418::|32|20191004|allocated
 lacnic|BR|ipv6|2804:641c::|32|20191014|allocated
 lacnic|BR|ipv6|2804:6420::|32|20191014|allocated
 lacnic|BR|ipv6|2804:6424::|32|20191014|allocated
-lacnic|BR|ipv6|2804:6428::|32|20191014|allocated
 lacnic|BR|ipv6|2804:642c::|32|20191014|allocated
 lacnic|BR|ipv6|2804:6430::|32|20191014|allocated
 lacnic|BR|ipv6|2804:6434::|32|20191014|allocated
@@ -41703,7 +41703,6 @@ lacnic|BR|asn|269406|1|20191004|allocated
 lacnic|BR|asn|269407|1|20191014|allocated
 lacnic|BR|asn|269408|1|20191014|allocated
 lacnic|BR|asn|269409|1|20191014|allocated
-lacnic|BR|asn|269410|1|20191014|allocated
 lacnic|BR|asn|269411|1|20191014|allocated
 lacnic|BR|asn|269412|1|20191014|allocated
 lacnic|BR|asn|269413|1|20191014|allocated
