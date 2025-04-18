@@ -10,7 +10,7 @@
 
 - [CuratedLists workflow](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml): Creates curated lists - runs every day at `15:00`
   - [State Sponsors of Terrorism countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/StateSponsorsOfTerrorism.txt) - [_official website_](https://www.state.gov/state-sponsors-of-terrorism/)
-  - [OFAC Sanctioned Countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/OFACSanctioned.txt) - [_official website_](https://orpa.princeton.edu/export-controls/sanctioned-countries)
+  - [OFAC Sanctioned Countries cumulative list](https://github.com/HotCakeX/Official-IANA-IP-blocks/blob/main/Curated-Lists/OFACSanctioned.txt) - [_official website_](https://ofac.treasury.gov/sanctions-programs-and-country-information)
 
 [![Build](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/Build.yml) [![CuratedLists](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/CuratedLists.yml) [![pages-build-deployment](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/HotCakeX/Official-IANA-IP-blocks/actions/workflows/pages/pages-build-deployment)
 
