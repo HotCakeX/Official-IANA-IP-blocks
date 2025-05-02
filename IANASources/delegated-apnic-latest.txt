@@ -25,10 +25,10 @@
 #
 ######################################################################
 #
-2|apnic|20250502|81686|19830613|20250501|+1000
-apnic|*|asn|*|12934|summary
-apnic|*|ipv4|*|52717|summary
-apnic|*|ipv6|*|16035|summary
+2|apnic|20250503|81696|19830613|20250502|+1000
+apnic|*|asn|*|12937|summary
+apnic|*|ipv4|*|52722|summary
+apnic|*|ipv6|*|16037|summary
 apnic|JP|asn|173|1|20020801|allocated
 apnic|NZ|asn|681|1|20020801|allocated
 apnic|SG|asn|963|1|20220622|allocated
@@ -10193,7 +10193,6 @@ apnic|HK|asn|141167|1|20200909|allocated
 apnic|CN|asn|141168|1|20200909|allocated
 apnic|RU|asn|141171|1|20200909|allocated
 apnic|CN|asn|141172|1|20220609|allocated
-apnic|TW|asn|141173|1|20200910|allocated
 apnic|HK|asn|141174|1|20200910|allocated
 apnic|NP|asn|141175|1|20200911|allocated
 apnic|CN|asn|141176|1|20230909|allocated
@@ -12963,6 +12962,10 @@ apnic|IN|asn|153842|1|20250430|allocated
 apnic|ID|asn|153843|1|20250430|allocated
 apnic|PK|asn|153844|1|20250501|allocated
 apnic|IN|asn|153845|2|20250501|allocated
+apnic|PK|asn|153847|1|20250502|allocated
+apnic|ID|asn|153848|2|20250502|allocated
+apnic|NZ|asn|153850|1|20250502|allocated
+apnic|IN|asn|153851|2|20250502|allocated
 apnic|AU|ipv4|1.0.0.0|256|20110811|assigned
 apnic|CN|ipv4|1.0.1.0|256|20110414|allocated
 apnic|CN|ipv4|1.0.2.0|512|20110414|allocated
@@ -23303,7 +23306,6 @@ apnic|VN|ipv4|103.52.112.0|512|20221209|allocated
 apnic|ID|ipv4|103.52.114.0|512|20221209|allocated
 apnic|AU|ipv4|103.52.116.0|1024|20150309|allocated
 apnic|ID|ipv4|103.52.120.0|1024|20150309|allocated
-apnic|IN|ipv4|103.52.124.0|1024|20150309|assigned
 apnic|JP|ipv4|103.52.128.0|1024|20150309|allocated
 apnic|JP|ipv4|103.52.132.0|256|20150309|assigned
 apnic|ID|ipv4|103.52.133.0|256|20220915|allocated
@@ -50935,8 +50937,14 @@ apnic|IN|ipv4|163.227.204.0|256|20250501|assigned
 apnic|IN|ipv4|163.227.205.0|256|20250501|allocated
 apnic|IN|ipv4|163.227.206.0|512|20250501|assigned
 apnic|AU|ipv4|163.227.208.0|256|20250501|allocated
+apnic|SG|ipv4|163.227.209.0|256|20250502|assigned
 apnic|IN|ipv4|163.227.210.0|512|20250501|allocated
+apnic|PK|ipv4|163.227.212.0|512|20250502|allocated
+apnic|HK|ipv4|163.227.214.0|512|20250502|allocated
+apnic|IN|ipv4|163.227.216.0|512|20250502|allocated
+apnic|NZ|ipv4|163.227.218.0|256|20250502|assigned
 apnic|JP|ipv4|163.227.221.0|256|19930416|allocated
+apnic|IN|ipv4|163.227.222.0|512|20250502|assigned
 apnic|JP|ipv4|163.227.225.0|256|19930416|allocated
 apnic|JP|ipv4|163.227.226.0|512|19930416|allocated
 apnic|JP|ipv4|163.227.233.0|256|19930416|allocated
@@ -66800,7 +66808,6 @@ apnic|ID|ipv6|2001:df0:5a80::|48|20190508|assigned
 apnic|IN|ipv6|2001:df0:5ac0::|48|20220125|assigned
 apnic|AU|ipv6|2001:df0:5b00::|48|20170221|assigned
 apnic|VN|ipv6|2001:df0:5b40::|48|20220126|assigned
-apnic|IN|ipv6|2001:df0:5b80::|48|20190508|assigned
 apnic|VN|ipv6|2001:df0:5bc0::|48|20220126|assigned
 apnic|BD|ipv6|2001:df0:5c00::|48|20140903|assigned
 apnic|VN|ipv6|2001:df0:5c40::|48|20220126|assigned
@@ -71686,7 +71693,9 @@ apnic|IN|ipv6|2001:df5:7a40::|48|20250430|assigned
 apnic|IN|ipv6|2001:df5:7a80::|48|20201127|assigned
 apnic|IN|ipv6|2001:df5:7ac0::|48|20250501|assigned
 apnic|ID|ipv6|2001:df5:7b00::|48|20180607|assigned
+apnic|IN|ipv6|2001:df5:7b40::|48|20250502|assigned
 apnic|IN|ipv6|2001:df5:7b80::|48|20201127|assigned
+apnic|NZ|ipv6|2001:df5:7bc0::|48|20250502|assigned
 apnic|IN|ipv6|2001:df5:7c00::|48|20150813|assigned
 apnic|IN|ipv6|2001:df5:7c80::|48|20201127|assigned
 apnic|IN|ipv6|2001:df5:7d80::|48|20201129|assigned
@@ -76300,7 +76309,6 @@ apnic|ID|ipv6|2402:480::|32|20150205|allocated
 apnic|TW|ipv6|2402:4a0::|32|20250428|allocated
 apnic|VN|ipv6|2402:4e0::|32|20250428|allocated
 apnic|SG|ipv6|2402:500::|32|20110920|allocated
-apnic|BD|ipv6|2402:520::|32|20250428|allocated
 apnic|IN|ipv6|2402:540::|32|20171117|allocated
 apnic|IN|ipv6|2402:560::|32|20250429|allocated
 apnic|ID|ipv6|2402:580::|32|20150206|allocated
@@ -76313,7 +76321,9 @@ apnic|IN|ipv6|2402:640::|32|20171117|allocated
 apnic|IN|ipv6|2402:660::|32|20250501|allocated
 apnic|ID|ipv6|2402:680::|32|20150206|allocated
 apnic|IN|ipv6|2402:6a0::|32|20250501|allocated
+apnic|SG|ipv6|2402:6e0::|32|20250502|allocated
 apnic|JP|ipv6|2402:700::|32|20110922|allocated
+apnic|HK|ipv6|2402:720::|32|20250502|allocated
 apnic|IN|ipv6|2402:740::|32|20171120|allocated
 apnic|ID|ipv6|2402:780::|32|20150206|allocated
 apnic|NZ|ipv6|2402:7c0::|32|20171121|allocated
