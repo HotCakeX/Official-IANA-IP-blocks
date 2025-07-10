@@ -1,7 +1,7 @@
-2|lacnic|20250708|48111|19870101|20250708|-0300
-lacnic|*|ipv4|*|19894|summary
-lacnic|*|ipv6|*|13044|summary
-lacnic|*|asn|*|15173|summary
+2|lacnic|20250709|48119|19870101|20250709|-0300
+lacnic|*|ipv4|*|19900|summary
+lacnic|*|ipv6|*|13045|summary
+lacnic|*|asn|*|15174|summary
 lacnic|DO|ipv4|5.183.80.0|1024|20240711|allocated
 lacnic|BR|ipv4|24.152.0.0|1024|20200310|allocated
 lacnic|BR|ipv4|24.152.4.0|1024|20200312|allocated
@@ -5944,7 +5944,13 @@ lacnic|MX|ipv4|148.225.0.0|65536|19980710|assigned
 lacnic|MX|ipv4|148.226.0.0|65536|19930406|assigned
 lacnic|MX|ipv4|148.227.0.0|16384|19971226|assigned
 lacnic|CL|ipv4|148.227.64.0|16384|19990121|allocated
-lacnic|MX|ipv4|148.227.128.0|32768|19971226|assigned
+lacnic|MX|ipv4|148.227.128.0|8192|19971226|assigned
+lacnic|MX|ipv4|148.227.160.0|2048|19971226|assigned
+lacnic|MX|ipv4|148.227.168.0|1024|19971226|assigned
+lacnic|MX|ipv4|148.227.172.0|512|19971226|assigned
+lacnic|MX|ipv4|148.227.174.0|256|19971226|assigned
+lacnic|MX|ipv4|148.227.176.0|4096|19971226|assigned
+lacnic|MX|ipv4|148.227.192.0|16384|19971226|assigned
 lacnic|MX|ipv4|148.228.0.0|65536|19930326|assigned
 lacnic|MX|ipv4|148.229.0.0|65536|19930416|assigned
 lacnic|CL|ipv4|148.230.0.0|1024|19971226|allocated
@@ -24289,6 +24295,7 @@ lacnic|CL|ipv6|2803:f980::|32|20140701|allocated
 lacnic|DO|ipv6|2803:f990::|32|20230316|allocated
 lacnic|AR|ipv6|2803:f9a0::|32|20181116|allocated
 lacnic|AR|ipv6|2803:f9c0::|32|20170425|allocated
+lacnic|CO|ipv6|2803:f9d0::|32|20250709|allocated
 lacnic|VE|ipv6|2803:f9e0::|32|20200605|allocated
 lacnic|BO|ipv6|2803:fa00::|32|20120730|allocated
 lacnic|EC|ipv6|2803:fa10::|32|20210707|allocated
@@ -46459,6 +46466,7 @@ lacnic|DO|asn|274159|1|20250703|allocated
 lacnic|VE|asn|274160|1|20250703|allocated
 lacnic|PY|asn|274161|1|20250703|allocated
 lacnic|PE|asn|274162|1|20250708|allocated
+lacnic|CO|asn|274163|1|20250709|allocated
 lacnic|BR|asn|274461|1|20250703|allocated
 lacnic|BR|asn|274462|1|20250703|allocated
 lacnic|BR|asn|274463|1|20250703|allocated
