@@ -1,0 +1,31 @@
+[package]
+name = "ip-country-data"
+version = "0.1.0"
+edition = "2024"
+authors = ["Violet Hansen"]
+license = "MIT"
+homepage = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
+repository = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
+documentation = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
+publish = false
+rust-version = "1.91"
+
+[dependencies]
+tokio = { version = "*", features = ["full"] }
+reqwest = { version = "*", features = ["json"] }
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+csv = "*"
+regex = "*"
+anyhow = "*"
+futures = "*"
+rayon = "*"
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+split-debuginfo = "packed"
+strip = "symbols"
+lto = "fat"
+incremental = false
+panic = "unwind"

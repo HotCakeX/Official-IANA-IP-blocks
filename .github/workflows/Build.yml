@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build
         run: |
-          .\build.ps1
+          .\ip-country-data.exe
           # Pushing the sources and list to main
           git config --global user.email "spynetgirl@outlook.com"
           git config --global user.name "HotCakeX"
