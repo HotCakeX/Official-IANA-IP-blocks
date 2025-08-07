@@ -1,11 +1,16 @@
 Country,IP,PrefixLength,Version
-EG,2c0e::,20,ipv6
-EG,2c0f:6c0::,28,ipv6
 EG,2001:4220::,32,ipv6
 EG,2001:42b8::,32,ipv6
 EG,2001:4300::,32,ipv6
 EG,2001:4388::,32,ipv6
 EG,2001:43c8::,32,ipv6
+EG,2001:43f8:40::,48,ipv6
+EG,2001:43f8:41::,48,ipv6
+EG,2001:43f8:2e0::,48,ipv6
+EG,2001:43f8:c50::,48,ipv6
+EG,2001:43fc:2800::,48,ipv6
+EG,2c0e::,20,ipv6
+EG,2c0f:6c0::,28,ipv6
 EG,2c0f:2340::,32,ipv6
 EG,2c0f:6240::,32,ipv6
 EG,2c0f:7480::,32,ipv6
@@ -14,8 +19,3 @@ EG,2c0f:f0b0::,32,ipv6
 EG,2c0f:fc40::,32,ipv6
 EG,2c0f:fc88::,31,ipv6
 EG,2c0f:fee0::,32,ipv6
-EG,2001:43f8:40::,48,ipv6
-EG,2001:43f8:41::,48,ipv6
-EG,2001:43f8:2e0::,48,ipv6
-EG,2001:43f8:c50::,48,ipv6
-EG,2001:43fc:2800::,48,ipv6

@@ -1,8 +1,8 @@
 [
   {
     "Country": "BZ",
-    "IP": "2803:b4::",
-    "PrefixLength": "32",
+    "IP": "2001:67c:255c::",
+    "PrefixLength": "48",
     "Version": "ipv6"
   },
   {
@@ -13,26 +13,14 @@
   },
   {
     "Country": "BZ",
+    "IP": "2803:b4::",
+    "PrefixLength": "32",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "BZ",
     "IP": "2803:160::",
     "PrefixLength": "32",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "BZ",
-    "IP": "2a05:840::",
-    "PrefixLength": "30",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "BZ",
-    "IP": "2a07:180::",
-    "PrefixLength": "32",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "BZ",
-    "IP": "2a07:e00::",
-    "PrefixLength": "29",
     "Version": "ipv6"
   },
   {
@@ -151,7 +139,25 @@
   },
   {
     "Country": "BZ",
+    "IP": "2a05:840::",
+    "PrefixLength": "30",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "BZ",
     "IP": "2a05:6200::",
+    "PrefixLength": "29",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "BZ",
+    "IP": "2a07:180::",
+    "PrefixLength": "32",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "BZ",
+    "IP": "2a07:e00::",
     "PrefixLength": "29",
     "Version": "ipv6"
   },
@@ -189,12 +195,6 @@
     "Country": "BZ",
     "IP": "2a10:de00::",
     "PrefixLength": "29",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "BZ",
-    "IP": "2001:67c:255c::",
-    "PrefixLength": "48",
     "Version": "ipv6"
   }
 ]

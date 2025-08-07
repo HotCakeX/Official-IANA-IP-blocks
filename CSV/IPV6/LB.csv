@@ -1,15 +1,6 @@
 Country,IP,PrefixLength,Version
-LB,2a0a:c0::,29,ipv6
-LB,2a02:f50::,32,ipv6
-LB,2a05:c40::,32,ipv6
-LB,2a06:240::,29,ipv6
-LB,2a0a:240::,29,ipv6
-LB,2a0a:500::,29,ipv6
-LB,2a0c:1c0::,29,ipv6
-LB,2a0d:e40::,29,ipv6
-LB,2a10:700::,29,ipv6
-LB,2a13:280::,29,ipv6
-LB,2a14:a80::,29,ipv6
+LB,2001:67c:1150::,48,ipv6
+LB,2001:7f8:c2::,48,ipv6
 LB,2a00:1580::,29,ipv6
 LB,2a00:1590::,32,ipv6
 LB,2a00:16e8::,32,ipv6
@@ -20,6 +11,7 @@ LB,2a00:c6a0::,32,ipv6
 LB,2a00:ee80::,32,ipv6
 LB,2a01:7b00::,32,ipv6
 LB,2a01:e780::,29,ipv6
+LB,2a02:f50::,32,ipv6
 LB,2a02:4080::,32,ipv6
 LB,2a02:4180::,32,ipv6
 LB,2a02:5700::,32,ipv6
@@ -38,6 +30,7 @@ LB,2a04:86c0::,29,ipv6
 LB,2a04:9cc0::,29,ipv6
 LB,2a04:d1c0::,29,ipv6
 LB,2a04:ea80::,29,ipv6
+LB,2a05:c40::,32,ipv6
 LB,2a05:1780::,29,ipv6
 LB,2a05:2c80::,29,ipv6
 LB,2a05:5b80::,29,ipv6
@@ -50,6 +43,7 @@ LB,2a05:c300::,29,ipv6
 LB,2a05:d600::,29,ipv6
 LB,2a05:e380::,29,ipv6
 LB,2a05:fd40::,29,ipv6
+LB,2a06:240::,29,ipv6
 LB,2a06:3480::,29,ipv6
 LB,2a06:78c0::,29,ipv6
 LB,2a06:b540::,29,ipv6
@@ -65,6 +59,9 @@ LB,2a07:f440::,29,ipv6
 LB,2a09:1d40::,29,ipv6
 LB,2a09:4840::,32,ipv6
 LB,2a09:ec40::,29,ipv6
+LB,2a0a:c0::,29,ipv6
+LB,2a0a:240::,29,ipv6
+LB,2a0a:500::,29,ipv6
 LB,2a0a:2d40::,29,ipv6
 LB,2a0a:6c00::,29,ipv6
 LB,2a0a:ec80::,29,ipv6
@@ -74,7 +71,9 @@ LB,2a0b:7c40::,29,ipv6
 LB,2a0b:8e80::,29,ipv6
 LB,2a0b:e080::,31,ipv6
 LB,2a0b:fc80::,29,ipv6
+LB,2a0c:1c0::,29,ipv6
 LB,2a0c:1c40::,29,ipv6
+LB,2a0d:e40::,29,ipv6
 LB,2a0d:3680::,29,ipv6
 LB,2a0d:5200::,29,ipv6
 LB,2a0d:6340::,29,ipv6
@@ -85,6 +84,7 @@ LB,2a0e:d7c0::,29,ipv6
 LB,2a0e:fe00::,29,ipv6
 LB,2a0f:9540::,29,ipv6
 LB,2a0f:b1c0::,29,ipv6
+LB,2a10:700::,29,ipv6
 LB,2a10:1300::,29,ipv6
 LB,2a10:1900::,29,ipv6
 LB,2a10:1b00::,29,ipv6
@@ -94,12 +94,12 @@ LB,2a10:9140::,29,ipv6
 LB,2a10:c200::,29,ipv6
 LB,2a12:2640::,29,ipv6
 LB,2a12:4b80::,29,ipv6
+LB,2a13:280::,29,ipv6
 LB,2a13:2f80::,29,ipv6
 LB,2a13:44c0::,29,ipv6
 LB,2a13:fa40::,29,ipv6
 LB,2a13:fa80::,29,ipv6
+LB,2a14:a80::,29,ipv6
 LB,2a14:64c0::,29,ipv6
 LB,2a14:7900::,29,ipv6
 LB,2a14:af80::,29,ipv6
-LB,2001:7f8:c2::,48,ipv6
-LB,2001:67c:1150::,48,ipv6

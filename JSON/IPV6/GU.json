@@ -1,8 +1,20 @@
 [
   {
     "Country": "GU",
-    "IP": "2404:380::",
-    "PrefixLength": "32",
+    "IP": "2001:de9:4000::",
+    "PrefixLength": "48",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "GU",
+    "IP": "2001:def:c000::",
+    "PrefixLength": "47",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "GU",
+    "IP": "2001:df7:df80::",
+    "PrefixLength": "48",
     "Version": "ipv6"
   },
   {
@@ -14,6 +26,12 @@
   {
     "Country": "GU",
     "IP": "2402:6200::",
+    "PrefixLength": "32",
+    "Version": "ipv6"
+  },
+  {
+    "Country": "GU",
+    "IP": "2404:380::",
     "PrefixLength": "32",
     "Version": "ipv6"
   },
@@ -45,24 +63,6 @@
     "Country": "GU",
     "IP": "2604:49c0::",
     "PrefixLength": "32",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "GU",
-    "IP": "2001:de9:4000::",
-    "PrefixLength": "48",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "GU",
-    "IP": "2001:def:c000::",
-    "PrefixLength": "47",
-    "Version": "ipv6"
-  },
-  {
-    "Country": "GU",
-    "IP": "2001:df7:df80::",
-    "PrefixLength": "48",
     "Version": "ipv6"
   }
 ]
