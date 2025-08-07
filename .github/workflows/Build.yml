@@ -1,0 +1,22 @@
+name: Build
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * *"
+permissions: write-all
+jobs:
+  build:
+    name: Run Build
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          & .\ip-country-data.exe
+          # Pushing the sources and list to main
+          git config --global user.email "spynetgirl@outlook.com"
+          git config --global user.name "HotCakeX"
+          git add --all
+          git commit -m "updating sources and list"
+          git push
+        shell: pwsh
