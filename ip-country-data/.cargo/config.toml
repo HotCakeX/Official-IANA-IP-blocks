@@ -3,7 +3,6 @@ target-dir = "target"
 
 [target.x86_64-pc-windows-msvc]
 rustflags = [
-  "-Z", "ehcont-guard=true",
   "-C", "control-flow-guard=true",
   "-Z", "cf-protection=full",
   "-C", "target-cpu=x86-64-v2",
@@ -12,7 +11,6 @@ rustflags = [
 
 [target.aarch64-pc-windows-msvc]
 rustflags = [
-  "-Z", "ehcont-guard=true",
   "-C", "control-flow-guard=true",
   "-C", "target-feature=+crt-static",
 ]

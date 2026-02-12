@@ -8,7 +8,7 @@ homepage = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
 repository = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
 documentation = "https://github.com/HotCakeX/Official-IANA-IP-blocks"
 publish = false
-rust-version = "1.91"
+rust-version = "1.93"
 
 [dependencies]
 tokio = { version = "*", features = ["full"] }

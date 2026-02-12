@@ -1,0 +1,36 @@
+name: Dependabot auto-approve and merge
+
+on:
+  pull_request_target:
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-slim
+    if: github.actor == 'dependabot[bot]' && github.repository == 'HotCakeX/Official-IANA-IP-blocks'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Approve and Merge
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr checkout "$PR_URL"
+
+          # Approve
+          REVIEW_DECISION=$(gh pr view "$PR_URL" --json reviewDecision -q .reviewDecision)
+          if [ "$REVIEW_DECISION" != "APPROVED" ]; then
+            gh pr review --approve "$PR_URL"
+            echo "PR approved."
+          else
+            echo "PR already approved."
+          fi
+
+          # GitHub will merge the PR once all branch protection requirements are satisfied (including this job completing successfully).
+          gh pr merge --merge --delete-branch --auto "$PR_URL"
+          echo "Auto-merge enabled. PR will be merged once all checks pass."
