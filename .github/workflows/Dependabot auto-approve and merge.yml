@@ -1,28 +1,26 @@
 name: Dependabot Auto-Approve and Merge
-# This workflow uses a PAT (OPEN_SESAME) with the following permissions: Read and Write access to Contents - Read and Write access to Pull Requests
+
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize, reopened]
 
+# Elevate the default GITHUB_TOKEN permissions
 permissions:
   pull-requests: write
   contents: write
-  checks: read
-  statuses: read
-  actions: read
 
 jobs:
   approve-and-merge:
     name: Approve and Merge Dependabot PRs
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
 
-    # This ensures only the official Dependabot can trigger this.
+    # Ensures this workflow only runs for the official Dependabot account
     if: github.actor == 'dependabot[bot]'
 
     steps:
       - name: Assign PR to HotCakeX
         env:
-          GH_TOKEN: ${{ secrets.OPEN_SESAME }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
         run: |
           # Query the PR to check current assignees
@@ -35,60 +33,21 @@ jobs:
             gh pr edit "$PR_URL" --add-assignee "HotCakeX"
           fi
 
-      - name: Wait for workflows to register
-        # Pause briefly to give GitHub Actions enough time to evaluate
-        run: sleep 40
-
-      - name: Wait for all PR checks to succeed (and detect failures)
+      - name: Approve PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
-          # A comma-separated list of workflow names whose failure is acceptable.
-          ALLOWED_FAILURES: "dependency-review"
         run: |
-          echo "Watching checks for $PR_URL..."
-          echo "Acceptable failures configured: $ALLOWED_FAILURES"
-
-          while true; do
-            # Fetch checks in JSON format
-            CHECKS_JSON=$(gh pr checks "$PR_URL" --json name,bucket)
-
-            # 1. Look for unacceptable failures (abort immediately)
-            # Saving the check's name as $n before filtering to prevent jq context errors.
-            FAILED_CHECKS=$(echo "$CHECKS_JSON" | jq -c --arg allowed "$ALLOWED_FAILURES" '
-              ($allowed | split(",")) as $allowed_list |
-              [.[] | select(.bucket == "fail" or .bucket == "cancel") | select(.name as $n | $allowed_list | index($n) | not)]
-            ')
-            FAILED_COUNT=$(echo "$FAILED_CHECKS" | jq 'length')
-
-            if [ "$FAILED_COUNT" -gt 0 ]; then
-              echo "❌ One or more strict required checks failed or were cancelled. Aborting auto-merge."
-              echo "Unacceptable failed checks:"
-              echo "$FAILED_CHECKS" | jq -r '.[] | " - \(.name)"'
-              exit 1
-            fi
-
-            # 2. Look for pending checks, ignoring this exact running workflow
-            PENDING_COUNT=$(echo "$CHECKS_JSON" | jq '[.[] | select(.bucket == "pending" and .name != "Approve and Merge Dependabot PRs" and .name != "Dependabot Auto-Approve and Merge")] | length')
-            if [ "$PENDING_COUNT" -eq 0 ]; then
-              echo "✅ All required checks have successfully passed (or were marked as acceptable failures)."
-              break
-            fi
-
-            echo "⏳ Waiting for $PENDING_COUNT other check(s) to finish. Checking again in 15 seconds..."
-            sleep 15
-          done
-
-      - name: Approve PR
-        env:
-          GH_TOKEN: ${{ secrets.OPEN_SESAME }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
-        run: |
+          echo "✅ Approving the PR..."
+          # The GITHUB_TOKEN will act on behalf of github-actions[bot] to approve the PR
           gh pr review "$PR_URL" --approve
 
-      - name: Merge PR
+      - name: Enable Auto-Merge
         env:
-          GH_TOKEN: ${{ secrets.OPEN_SESAME }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
         run: |
-          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "✅ Enabling auto-merge for the PR..."
+          # --auto enables native GitHub auto-merge (defers merging until required checks pass).
+          # --squash and --delete-branch maintain the merge strategy.
+          gh pr merge "$PR_URL" --auto --squash --delete-branch
