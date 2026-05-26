@@ -1,7 +1,7 @@
-2|lacnic|20260524|49385|19870101|20260521|-0300
-lacnic|*|ipv4|*|20219|summary
-lacnic|*|ipv6|*|13381|summary
-lacnic|*|asn|*|15785|summary
+2|lacnic|20260525|49391|19870101|20260525|-0300
+lacnic|*|ipv4|*|20221|summary
+lacnic|*|ipv6|*|13383|summary
+lacnic|*|asn|*|15787|summary
 lacnic|DO|ipv4|5.183.80.0|1024|20240711|allocated
 lacnic|BR|ipv4|24.152.0.0|1024|20200310|allocated
 lacnic|BR|ipv4|24.152.4.0|1024|20200312|allocated
@@ -207,6 +207,7 @@ lacnic|BR|ipv4|45.6.112.0|1024|20170331|allocated
 lacnic|BR|ipv4|45.6.116.0|512|20170412|allocated
 lacnic|BR|ipv4|45.6.118.0|256|20170412|allocated
 lacnic|BR|ipv4|45.6.119.0|256|20170412|allocated
+lacnic|BR|ipv4|45.6.120.0|1024|20260525|allocated
 lacnic|BR|ipv4|45.6.124.0|1024|20170405|allocated
 lacnic|BR|ipv4|45.6.128.0|1024|20170405|allocated
 lacnic|AR|ipv4|45.6.132.0|1024|20170404|allocated
@@ -12215,6 +12216,7 @@ lacnic|BR|ipv4|186.208.32.0|4096|20100524|allocated
 lacnic|BR|ipv4|186.208.48.0|4096|20100524|assigned
 lacnic|BR|ipv4|186.208.64.0|4096|20100524|allocated
 lacnic|BR|ipv4|186.208.80.0|2048|20120402|allocated
+lacnic|BR|ipv4|186.208.88.0|1024|20260525|allocated
 lacnic|BR|ipv4|186.208.96.0|4096|20100625|allocated
 lacnic|BR|ipv4|186.208.112.0|4096|20100705|allocated
 lacnic|BR|ipv4|186.208.128.0|4096|20100524|allocated
@@ -33221,6 +33223,8 @@ lacnic|BR|ipv6|2804:98fc::|32|20260515|allocated
 lacnic|BR|ipv6|2804:9900::|32|20260518|allocated
 lacnic|BR|ipv6|2804:9904::|32|20260521|allocated
 lacnic|BR|ipv6|2804:9908::|32|20260521|allocated
+lacnic|BR|ipv6|2804:990c::|32|20260525|allocated
+lacnic|BR|ipv6|2804:9910::|32|20260525|allocated
 lacnic|MX|ipv6|2806::|28|20101006|allocated
 lacnic|MX|ipv6|2806:200::|32|20110420|allocated
 lacnic|MX|ipv6|2806:202::|32|20150629|allocated
@@ -47776,3 +47780,5 @@ lacnic|BR|asn|275749|1|20260515|allocated
 lacnic|BR|asn|275750|1|20260518|allocated
 lacnic|BR|asn|275751|1|20260521|allocated
 lacnic|BR|asn|275752|1|20260521|allocated
+lacnic|BR|asn|275753|1|20260525|allocated
+lacnic|BR|asn|275754|1|20260525|allocated
