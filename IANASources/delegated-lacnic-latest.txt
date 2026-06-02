@@ -1,7 +1,7 @@
-2|lacnic|20260531|49415|19870101|20260529|-0300
-lacnic|*|ipv4|*|20227|summary
-lacnic|*|ipv6|*|13389|summary
-lacnic|*|asn|*|15799|summary
+2|lacnic|20260601|49422|19870101|20260601|-0300
+lacnic|*|ipv4|*|20230|summary
+lacnic|*|ipv6|*|13391|summary
+lacnic|*|asn|*|15801|summary
 lacnic|DO|ipv4|5.183.80.0|1024|20240711|allocated
 lacnic|BR|ipv4|24.152.0.0|1024|20200310|allocated
 lacnic|BR|ipv4|24.152.4.0|1024|20200312|allocated
@@ -15483,7 +15483,10 @@ lacnic|BR|ipv4|191.128.240.0|1024|20140317|allocated
 lacnic|BR|ipv4|191.128.244.0|256|20140317|allocated
 lacnic|BR|ipv4|191.128.245.0|256|20140317|allocated
 lacnic|BR|ipv4|191.128.246.0|512|20140317|allocated
-lacnic|BR|ipv4|191.128.248.0|2048|20140317|allocated
+lacnic|BR|ipv4|191.128.248.0|256|20140317|allocated
+lacnic|BR|ipv4|191.128.249.0|256|20140317|allocated
+lacnic|BR|ipv4|191.128.250.0|512|20140317|allocated
+lacnic|BR|ipv4|191.128.252.0|1024|20140317|allocated
 lacnic|BR|ipv4|191.129.0.0|65536|20140317|allocated
 lacnic|BR|ipv4|191.130.0.0|131072|20140317|allocated
 lacnic|BR|ipv4|191.132.0.0|262144|20140317|allocated
@@ -21894,6 +21897,7 @@ lacnic|PA|ipv6|2801:158::|36|20151215|assigned
 lacnic|CO|ipv6|2801:159::|44|20221205|assigned
 lacnic|CO|ipv6|2801:15a::|40|20200527|assigned
 lacnic|CO|ipv6|2801:15c::|44|20190313|assigned
+lacnic|CR|ipv6|2801:15d::|44|20260601|assigned
 lacnic|CO|ipv6|2801:15e::|44|20210406|assigned
 lacnic|CO|ipv6|2801:160::|40|20130612|assigned
 lacnic|CL|ipv6|2801:161::|44|20211213|assigned
@@ -24745,6 +24749,7 @@ lacnic|PA|ipv6|2803:f0e0::|32|20191205|allocated
 lacnic|AR|ipv6|2803:f100::|32|20121017|allocated
 lacnic|GY|ipv6|2803:f110::|32|20211019|allocated
 lacnic|UY|ipv6|2803:f120::|32|20171204|allocated
+lacnic|CO|ipv6|2803:f130::|32|20260601|allocated
 lacnic|AR|ipv6|2803:f140::|32|20151117|allocated
 lacnic|CR|ipv6|2803:f150::|32|20240517|allocated
 lacnic|SV|ipv6|2803:f160::|32|20190726|allocated
@@ -47656,6 +47661,8 @@ lacnic|CO|asn|274936|1|20260527|allocated
 lacnic|CO|asn|274937|1|20260528|allocated
 lacnic|CO|asn|274938|1|20260528|allocated
 lacnic|AR|asn|274939|1|20260528|allocated
+lacnic|CO|asn|274940|1|20260601|allocated
+lacnic|CO|asn|274941|1|20260601|allocated
 lacnic|BR|asn|275613|1|20251222|allocated
 lacnic|BR|asn|275614|1|20251222|allocated
 lacnic|BR|asn|275615|1|20251223|allocated
