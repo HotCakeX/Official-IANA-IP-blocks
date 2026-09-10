@@ -1,5 +1,5 @@
-2|lacnic|20260908|49937|19870101|20260908|-0300
-lacnic|*|ipv4|*|20391|summary
+2|lacnic|20260909|49941|19870101|20260908|-0300
+lacnic|*|ipv4|*|20395|summary
 lacnic|*|ipv6|*|13529|summary
 lacnic|*|asn|*|16017|summary
 lacnic|GT|ipv4|2.152.0.0|1024|20260714|allocated
@@ -9351,7 +9351,8 @@ lacnic|BR|ipv4|177.73.112.0|2048|20110826|allocated
 lacnic|BR|ipv4|177.73.120.0|1024|20121214|allocated
 lacnic|BR|ipv4|177.73.124.0|1024|20131226|allocated
 lacnic|BR|ipv4|177.73.128.0|1024|20230922|allocated
-lacnic|BR|ipv4|177.73.132.0|1024|20230721|allocated
+lacnic|BR|ipv4|177.73.132.0|512|20230721|allocated
+lacnic|BR|ipv4|177.73.134.0|512|20230721|allocated
 lacnic|BR|ipv4|177.73.136.0|1024|20121217|allocated
 lacnic|BR|ipv4|177.73.140.0|1024|20130327|allocated
 lacnic|BR|ipv4|177.73.144.0|1024|20110826|allocated
@@ -12255,7 +12256,9 @@ lacnic|BR|ipv4|186.196.24.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.28.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.32.0|4096|20100329|allocated
 lacnic|BR|ipv4|186.196.48.0|4096|20100329|allocated
-lacnic|BR|ipv4|186.196.64.0|1024|20100329|allocated
+lacnic|BR|ipv4|186.196.64.0|512|20100329|allocated
+lacnic|BR|ipv4|186.196.66.0|256|20100329|allocated
+lacnic|BR|ipv4|186.196.67.0|256|20100329|allocated
 lacnic|BR|ipv4|186.196.68.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.72.0|512|20100329|allocated
 lacnic|BR|ipv4|186.196.74.0|256|20100329|allocated
@@ -12267,7 +12270,9 @@ lacnic|BR|ipv4|186.196.80.0|4096|20100329|allocated
 lacnic|BR|ipv4|186.196.96.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.100.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.104.0|2048|20100329|allocated
-lacnic|BR|ipv4|186.196.112.0|4096|20100329|allocated
+lacnic|BR|ipv4|186.196.112.0|2048|20100329|allocated
+lacnic|BR|ipv4|186.196.120.0|1024|20100329|allocated
+lacnic|BR|ipv4|186.196.124.0|1024|20100329|allocated
 lacnic|BR|ipv4|186.196.128.0|8192|20100329|allocated
 lacnic|BR|ipv4|186.196.160.0|8192|20100329|allocated
 lacnic|BR|ipv4|186.196.192.0|16384|20100329|allocated
@@ -17189,7 +17194,6 @@ lacnic|MX|ipv4|200.23.139.0|256|19960613|assigned
 lacnic|CL|ipv4|200.23.140.0|256|20200527|allocated
 lacnic|MX|ipv4|200.23.141.0|256|19960117|assigned
 lacnic|MX|ipv4|200.23.142.0|256|19960131|assigned
-lacnic|MX|ipv4|200.23.143.0|256|20090123|assigned
 lacnic|MX|ipv4|200.23.144.0|256|19971226|assigned
 lacnic|MX|ipv4|200.23.145.0|256|19981207|assigned
 lacnic|MX|ipv4|200.23.146.0|256|19981207|assigned
