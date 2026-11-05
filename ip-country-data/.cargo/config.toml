@@ -5,7 +5,7 @@ target-dir = "target"
 rustflags = [
   "-C", "control-flow-guard=true",
   "-Z", "cf-protection=full",
-  "-C", "target-cpu=x86-64-v2",
+  "-C", "target-cpu=x86-64-v3",
   "-C", "target-feature=+crt-static",
 ]
 

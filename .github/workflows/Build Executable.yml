@@ -1,0 +1,121 @@
+name: Build Executable
+
+on:
+  workflow_dispatch:
+
+# Prevent the workflow from running more than once at a time
+concurrency:
+  group: BuildExecutableWorkFlow
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-2025
+
+    permissions:
+      contents: write # Required for pushing the new executable to the repository
+
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v6
+
+      - name: Building the ip-country-data executable
+        shell: pwsh
+        working-directory: './ip-country-data'
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          #region --- Installing Rust ---
+
+          Write-Host -Object 'The version of the Winget currently in use:'
+          Write-Host -Object (winget --version)
+
+          winget source update
+
+          Write-Host -Object "`nInstalling Rust toolchain" -ForegroundColor Magenta
+          $null = winget install --id Rustlang.Rustup --exact --accept-package-agreements --accept-source-agreements --uninstall-previous --force --source winget
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed to install the Rust toolchain: $LASTEXITCODE") }
+
+          # Refresh the environment variables so the current session detects the new Rust installation
+          $Env:Path = [System.Environment]::GetEnvironmentVariable('Path', [System.EnvironmentVariableTarget]::Machine) + ';' +
+          [System.Environment]::GetEnvironmentVariable('Path', [System.EnvironmentVariableTarget]::User)
+
+          #endregion
+
+          #region --- RUST project ---
+
+          rustup toolchain install nightly
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed installing nightly Rust toolchain. Exit Code: $LASTEXITCODE") }
+
+          rustup default nightly
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed setting Rust toolchain to Nightly. Exit Code: $LASTEXITCODE") }
+
+          rustup target add x86_64-pc-windows-msvc
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed adding x86_64-pc-windows-msvc target to Rust toolchain. Exit Code: $LASTEXITCODE") }
+
+          # Required by the "-Z build-std" flag used in the build_x64 cargo alias
+          rustup component add rust-src --toolchain nightly-x86_64-pc-windows-msvc
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed adding X64 rust-src component to Nightly toolchain. Exit Code: $LASTEXITCODE") }
+
+          rustup update
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed updating Rust. Exit Code: $LASTEXITCODE") }
+
+          cargo version
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed checking for Rust version. Exit Code: $LASTEXITCODE") }
+
+          if (Test-Path -PathType Leaf -LiteralPath 'Cargo.lock') {
+              Remove-Item -Force -LiteralPath 'Cargo.lock'
+          }
+
+          cargo clean
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed cleaning the Rust project. Exit Code: $LASTEXITCODE") }
+
+          cargo update --verbose
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed updating Rust. Exit Code: $LASTEXITCODE") }
+
+          cargo tree
+
+          rustup show active-toolchain
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed showing active Rust toolchain. Exit Code: $LASTEXITCODE") }
+
+          cargo build_x64
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed building x64 ip-country-data project. Exit Code: $LASTEXITCODE") }
+
+          #endregion
+
+      - name: Replacing the executable and pushing it to the repository
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          Copy-Item -Path '.\ip-country-data\target\x86_64-pc-windows-msvc\release\ip-country-data.exe' -Destination '.\ip-country-data.exe' -Force
+
+          [System.String]$RustVersion = (rustc --version).Trim()
+          [System.String]$Hash = (Get-FileHash -Path '.\ip-country-data.exe' -Algorithm SHA256).Hash
+          Write-Host -Object "Built with: $RustVersion`nSHA256: $Hash"
+
+          git config --global user.email 'spynetgirl@outlook.com'
+          git config --global user.name 'HotCakeX'
+          git add 'ip-country-data.exe'
+          git commit -m "Rebuilt ip-country-data.exe with $RustVersion"
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed committing the executable. Exit Code: $LASTEXITCODE") }
+
+          # The scheduled Build workflow may have pushed in the meantime
+          git pull --rebase
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed pulling the latest changes. Exit Code: $LASTEXITCODE") }
+
+          git push
+
+          if ($LASTEXITCODE -ne 0) { throw [System.InvalidOperationException]::New("Failed pushing the executable. Exit Code: $LASTEXITCODE") }
