@@ -2,6 +2,9 @@ name: Build Executable
 
 on:
   workflow_dispatch:
+  schedule:
+    # At 08:30 PM on Thursdays
+    - cron: '30 20 * * 4'
 
 # Prevent the workflow from running more than once at a time
 concurrency:
@@ -17,7 +20,7 @@ jobs:
 
     steps:
       - name: Check out the repository code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Building the ip-country-data executable
         shell: pwsh
