@@ -11287,6 +11287,12 @@
   },
   {
     "Country": "AM",
+    "IP": "159.200.96.0",
+    "PrefixLength": "19",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "AM",
     "IP": "159.200.203.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -11541,12 +11547,6 @@
     "Country": "AM",
     "IP": "185.255.68.0",
     "PrefixLength": "22",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "AM",
-    "IP": "188.92.28.0",
-    "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
@@ -75038,7 +75038,13 @@
   {
     "Country": "AU",
     "IP": "202.68.112.0",
-    "PrefixLength": "21",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "AU",
+    "IP": "202.68.116.0",
+    "PrefixLength": "22",
     "Version": "ipv4"
   },
   {
@@ -132579,6 +132585,12 @@
     "Country": "BQ",
     "IP": "200.107.84.0",
     "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "BR",
+    "IP": "23.167.244.0",
+    "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
@@ -445657,6 +445669,12 @@
   },
   {
     "Country": "EE",
+    "IP": "82.158.176.0",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "EE",
     "IP": "83.97.79.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -453459,12 +453477,6 @@
     "Country": "ES",
     "IP": "82.144.96.0",
     "PrefixLength": "19",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "ES",
-    "IP": "82.158.176.0",
-    "PrefixLength": "22",
     "Version": "ipv4"
   },
   {
@@ -486794,7 +486806,31 @@
   {
     "Country": "FR",
     "IP": "92.160.0.0",
-    "PrefixLength": "12",
+    "PrefixLength": "14",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "FR",
+    "IP": "92.164.0.0",
+    "PrefixLength": "16",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "FR",
+    "IP": "92.165.0.0",
+    "PrefixLength": "16",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "FR",
+    "IP": "92.166.0.0",
+    "PrefixLength": "15",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "FR",
+    "IP": "92.168.0.0",
+    "PrefixLength": "13",
     "Version": "ipv4"
   },
   {
@@ -498176,6 +498212,12 @@
   {
     "Country": "FR",
     "IP": "192.54.244.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "FR",
+    "IP": "192.64.125.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -544273,12 +544315,6 @@
   },
   {
     "Country": "GB",
-    "IP": "192.64.125.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "GB",
     "IP": "192.65.16.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -583100,7 +583136,7 @@
   {
     "Country": "HK",
     "IP": "159.200.92.0",
-    "PrefixLength": "19",
+    "PrefixLength": "22",
     "Version": "ipv4"
   },
   {
@@ -584781,6 +584817,18 @@
     "Country": "HK",
     "IP": "191.124.0.0",
     "PrefixLength": "16",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "HK",
+    "IP": "191.141.0.0",
+    "PrefixLength": "16",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "HK",
+    "IP": "191.142.0.0",
+    "PrefixLength": "15",
     "Version": "ipv4"
   },
   {
@@ -600866,7 +600914,25 @@
   {
     "Country": "ID",
     "IP": "49.128.176.0",
-    "PrefixLength": "21",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "49.128.178.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "49.128.179.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "49.128.180.0",
+    "PrefixLength": "22",
     "Version": "ipv4"
   },
   {
@@ -602336,7 +602402,19 @@
   {
     "Country": "ID",
     "IP": "103.17.244.0",
-    "PrefixLength": "22",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.17.245.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.17.246.0",
+    "PrefixLength": "23",
     "Version": "ipv4"
   },
   {
@@ -624764,7 +624842,19 @@
   {
     "Country": "ID",
     "IP": "103.247.120.0",
-    "PrefixLength": "22",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.247.121.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.247.122.0",
+    "PrefixLength": "23",
     "Version": "ipv4"
   },
   {
@@ -625316,7 +625406,19 @@
   {
     "Country": "ID",
     "IP": "103.255.240.0",
-    "PrefixLength": "22",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.255.242.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "103.255.243.0",
+    "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
@@ -625490,7 +625592,25 @@
   {
     "Country": "ID",
     "IP": "111.68.24.0",
-    "PrefixLength": "21",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "111.68.28.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "111.68.29.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "111.68.30.0",
+    "PrefixLength": "23",
     "Version": "ipv4"
   },
   {
@@ -626198,7 +626318,25 @@
   {
     "Country": "ID",
     "IP": "116.254.112.0",
-    "PrefixLength": "21",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "116.254.114.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "116.254.115.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "116.254.116.0",
+    "PrefixLength": "22",
     "Version": "ipv4"
   },
   {
@@ -627356,6 +627494,12 @@
   {
     "Country": "ID",
     "IP": "141.229.24.0",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
+    "IP": "141.229.48.0",
     "PrefixLength": "23",
     "Version": "ipv4"
   },
@@ -636301,6 +636445,12 @@
   },
   {
     "Country": "ID",
+    "IP": "203.30.76.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "ID",
     "IP": "203.30.221.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -644900,6 +645050,12 @@
   {
     "Country": "IL",
     "IP": "178.212.93.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "IL",
+    "IP": "185.1.21.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -717625,6 +717781,12 @@
   },
   {
     "Country": "IR",
+    "IP": "195.2.250.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "IR",
     "IP": "195.8.102.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -741854,7 +742016,13 @@
   {
     "Country": "IT",
     "IP": "217.172.192.0",
-    "PrefixLength": "19",
+    "PrefixLength": "21",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "IT",
+    "IP": "217.172.208.0",
+    "PrefixLength": "20",
     "Version": "ipv4"
   },
   {
@@ -824995,6 +825163,12 @@
   },
   {
     "Country": "MX",
+    "IP": "23.168.36.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "MX",
     "IP": "45.5.52.0",
     "PrefixLength": "22",
     "Version": "ipv4"
@@ -858914,7 +859088,19 @@
   {
     "Country": "NL",
     "IP": "150.237.66.0",
-    "PrefixLength": "19",
+    "PrefixLength": "20",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NL",
+    "IP": "150.237.87.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NL",
+    "IP": "150.237.88.0",
+    "PrefixLength": "21",
     "Version": "ipv4"
   },
   {
@@ -885518,7 +885704,31 @@
   {
     "Country": "NO",
     "IP": "192.51.0.0",
-    "PrefixLength": "20",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NO",
+    "IP": "192.51.4.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NO",
+    "IP": "192.51.5.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NO",
+    "IP": "192.51.6.0",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NO",
+    "IP": "192.51.8.0",
+    "PrefixLength": "21",
     "Version": "ipv4"
   },
   {
@@ -897889,6 +898099,12 @@
   },
   {
     "Country": "NZ",
+    "IP": "203.28.205.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "NZ",
     "IP": "203.28.247.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -902438,6 +902654,18 @@
   {
     "Country": "PH",
     "IP": "23.167.124.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PH",
+    "IP": "23.167.228.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PH",
+    "IP": "23.167.236.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -924031,6 +924259,12 @@
   },
   {
     "Country": "PL",
+    "IP": "135.126.0.0",
+    "PrefixLength": "17",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PL",
     "IP": "138.226.240.0",
     "PrefixLength": "20",
     "Version": "ipv4"
@@ -939199,6 +939433,12 @@
   },
   {
     "Country": "PR",
+    "IP": "74.120.24.0",
+    "PrefixLength": "21",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PR",
     "IP": "76.72.240.0",
     "PrefixLength": "20",
     "Version": "ipv4"
@@ -940047,6 +940287,18 @@
     "Country": "PR",
     "IP": "199.91.76.0",
     "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PR",
+    "IP": "199.116.56.0",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "PR",
+    "IP": "199.116.60.0",
+    "PrefixLength": "23",
     "Version": "ipv4"
   },
   {
@@ -993445,12 +993697,6 @@
   },
   {
     "Country": "RU",
-    "IP": "91.241.4.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "RU",
     "IP": "91.241.12.0",
     "PrefixLength": "23",
     "Version": "ipv4"
@@ -1002835,12 +1003081,6 @@
   },
   {
     "Country": "RU",
-    "IP": "171.22.236.0",
-    "PrefixLength": "22",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "RU",
     "IP": "171.22.242.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -1004426,12 +1004666,6 @@
   {
     "Country": "RU",
     "IP": "176.122.17.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "RU",
-    "IP": "176.122.18.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1015952,6 +1016186,12 @@
   {
     "Country": "RU",
     "IP": "188.92.24.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "RU",
+    "IP": "188.92.28.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1040395,6 +1040635,12 @@
   },
   {
     "Country": "SC",
+    "IP": "91.241.4.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "SC",
     "IP": "91.241.180.0",
     "PrefixLength": "23",
     "Version": "ipv4"
@@ -1041475,6 +1041721,12 @@
   },
   {
     "Country": "SC",
+    "IP": "171.22.236.0",
+    "PrefixLength": "22",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "SC",
     "IP": "176.53.133.0",
     "PrefixLength": "24",
     "Version": "ipv4"
@@ -1041662,6 +1041914,12 @@
   {
     "Country": "SC",
     "IP": "176.119.142.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "SC",
+    "IP": "176.122.18.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1074444,6 +1074702,12 @@
     "Version": "ipv4"
   },
   {
+    "Country": "SM",
+    "IP": "217.172.200.0",
+    "PrefixLength": "21",
+    "Version": "ipv4"
+  },
+  {
     "Country": "SN",
     "IP": "41.82.0.0",
     "PrefixLength": "15",
@@ -1077638,6 +1077902,18 @@
   {
     "Country": "TH",
     "IP": "23.166.148.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "TH",
+    "IP": "23.168.28.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "TH",
+    "IP": "23.168.60.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1139839,31 +1140115,13 @@
   },
   {
     "Country": "US",
-    "IP": "23.167.228.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "US",
     "IP": "23.167.232.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
     "Country": "US",
-    "IP": "23.167.236.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "US",
     "IP": "23.167.240.0",
-    "PrefixLength": "24",
-    "Version": "ipv4"
-  },
-  {
-    "Country": "US",
-    "IP": "23.167.244.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1139881,13 +1140139,19 @@
   },
   {
     "Country": "US",
+    "IP": "23.168.20.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "US",
     "IP": "23.168.24.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
     "Country": "US",
-    "IP": "23.168.36.0",
+    "IP": "23.168.44.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1242649,8 +1242913,14 @@
   },
   {
     "Country": "US",
-    "IP": "135.126.0.0",
-    "PrefixLength": "15",
+    "IP": "135.126.128.0",
+    "PrefixLength": "17",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "US",
+    "IP": "135.127.0.0",
+    "PrefixLength": "16",
     "Version": "ipv4"
   },
   {
@@ -1260716,6 +1260986,12 @@
   {
     "Country": "US",
     "IP": "147.160.246.0",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "US",
+    "IP": "147.160.247.0",
     "PrefixLength": "24",
     "Version": "ipv4"
   },
@@ -1301781,6 +1302057,12 @@
     "Country": "US",
     "IP": "170.52.41.0",
     "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "US",
+    "IP": "170.52.42.0",
+    "PrefixLength": "23",
     "Version": "ipv4"
   },
   {
@@ -1453598,7 +1453880,13 @@
   {
     "Country": "US",
     "IP": "199.241.146.0",
-    "PrefixLength": "23",
+    "PrefixLength": "24",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "US",
+    "IP": "199.241.147.0",
+    "PrefixLength": "24",
     "Version": "ipv4"
   },
   {
@@ -1559360,6 +1559648,12 @@
   {
     "Country": "VN",
     "IP": "138.252.244.0",
+    "PrefixLength": "23",
+    "Version": "ipv4"
+  },
+  {
+    "Country": "VN",
+    "IP": "141.229.46.0",
     "PrefixLength": "23",
     "Version": "ipv4"
   },
